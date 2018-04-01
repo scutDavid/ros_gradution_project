@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/devel
+
+Name: qq
+Description: Description of qq
+Version: 0.0.0
+Cflags: -I/home/wwh/qqq/devel/include
+Libs: -L/home/wwh/qqq/devel/lib 
+Requires: roscpp rospy std_msgs message_runtime

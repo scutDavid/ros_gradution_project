@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/install
+
+Name: robot1_description
+Description: Description of robot1_description
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/wwh/qqq/install/lib 
+Requires: 

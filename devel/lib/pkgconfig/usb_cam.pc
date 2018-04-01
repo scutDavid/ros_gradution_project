@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/devel
+
+Name: usb_cam
+Description: Description of usb_cam
+Version: 0.3.6
+Cflags: -I/home/wwh/qqq/src/usb_cam/include
+Libs: -L/home/wwh/qqq/devel/lib -lusb_cam
+Requires: 

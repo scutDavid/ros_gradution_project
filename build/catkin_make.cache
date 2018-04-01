@@ -1,0 +1,2 @@
+c8:c9:qq:robot1_description:robot1_gazebo:usb_cam
+-DCMAKE_BUILD_TYPE=Debug -DCATKIN_DEVEL_PREFIX=/home/wwh/qqq/devel -DCMAKE_INSTALL_PREFIX=/home/wwh/qqq/install -G Unix Makefiles

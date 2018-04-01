@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/devel
+
+Name: c9
+Description: Description of c9
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/wwh/qqq/devel/lib 
+Requires: 

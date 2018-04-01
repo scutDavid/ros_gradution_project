@@ -1,0 +1,10 @@
+<launch>
+
+<node pkg="qq" name="temptalker" type="talker" output="screen">  
+       <remap from="/chatter" to="/chatter_2"/>
+       </node>   
+<node pkg="qq" name="templistener" type="listener" output="screen">  
+       
+        </node>  
+
+</launch>
