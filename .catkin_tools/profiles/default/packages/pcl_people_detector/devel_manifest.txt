@@ -1,0 +1,5 @@
+spencer_people_tracking/detection/rgbd_detectors/pcl_people_detector
+/home/wwh/qqq/devel/.private/pcl_people_detector/share/pcl_people_detector/cmake/pcl_people_detectorConfig.cmake /home/wwh/qqq/devel/share/pcl_people_detector/cmake/pcl_people_detectorConfig.cmake
+/home/wwh/qqq/devel/.private/pcl_people_detector/share/pcl_people_detector/cmake/pcl_people_detectorConfig-version.cmake /home/wwh/qqq/devel/share/pcl_people_detector/cmake/pcl_people_detectorConfig-version.cmake
+/home/wwh/qqq/devel/.private/pcl_people_detector/lib/pkgconfig/pcl_people_detector.pc /home/wwh/qqq/devel/lib/pkgconfig/pcl_people_detector.pc
+/home/wwh/qqq/devel/.private/pcl_people_detector/lib/pcl_people_detector/detect_people /home/wwh/qqq/devel/lib/pcl_people_detector/detect_people

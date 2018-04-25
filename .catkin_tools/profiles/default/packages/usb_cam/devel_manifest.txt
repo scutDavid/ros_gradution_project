@@ -1,0 +1,6 @@
+usb_cam
+/home/wwh/qqq/devel/.private/usb_cam/share/usb_cam/cmake/usb_camConfig-version.cmake /home/wwh/qqq/devel/share/usb_cam/cmake/usb_camConfig-version.cmake
+/home/wwh/qqq/devel/.private/usb_cam/share/usb_cam/cmake/usb_camConfig.cmake /home/wwh/qqq/devel/share/usb_cam/cmake/usb_camConfig.cmake
+/home/wwh/qqq/devel/.private/usb_cam/lib/libusb_cam.so /home/wwh/qqq/devel/lib/libusb_cam.so
+/home/wwh/qqq/devel/.private/usb_cam/lib/pkgconfig/usb_cam.pc /home/wwh/qqq/devel/lib/pkgconfig/usb_cam.pc
+/home/wwh/qqq/devel/.private/usb_cam/lib/usb_cam/usb_cam_node /home/wwh/qqq/devel/lib/usb_cam/usb_cam_node

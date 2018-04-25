@@ -1,0 +1,5 @@
+simple_layers
+/home/wwh/qqq/devel/.private/simple_layers/share/simple_layers/cmake/simple_layersConfig.cmake /home/wwh/qqq/devel/share/simple_layers/cmake/simple_layersConfig.cmake
+/home/wwh/qqq/devel/.private/simple_layers/share/simple_layers/cmake/simple_layersConfig-version.cmake /home/wwh/qqq/devel/share/simple_layers/cmake/simple_layersConfig-version.cmake
+/home/wwh/qqq/devel/.private/simple_layers/lib/libsimple_layers.so /home/wwh/qqq/devel/lib/libsimple_layers.so
+/home/wwh/qqq/devel/.private/simple_layers/lib/pkgconfig/simple_layers.pc /home/wwh/qqq/devel/lib/pkgconfig/simple_layers.pc

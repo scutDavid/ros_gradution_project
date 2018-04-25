@@ -77,7 +77,10 @@ while(n.ok())
     int num=0;
     while(!infile.eof())
     {
-        infile >>laser[times][num].angle>>laser[times][num].distance; 
+        if(infile.fail()) {  
+               break;                              
+        }else
+            infile >>laser[times][num].angle>>laser[times][num].distance; 
         num++;  
     }
     // cout<<laser[times][600].angle<<"\t"<<laser[times][600].distance<<"\n"<<endl;

@@ -23,6 +23,9 @@ c9/CMakeFiles/sendGoals.dir/src/sendGoals.cpp.o
  /opt/ros/kinetic/include/actionlib_msgs/GoalID.h
  /opt/ros/kinetic/include/actionlib_msgs/GoalStatus.h
  /opt/ros/kinetic/include/actionlib_msgs/GoalStatusArray.h
+ /opt/ros/kinetic/include/boost_161_condition_variable.h
+ /opt/ros/kinetic/include/boost_161_pthread_condition_variable.h
+ /opt/ros/kinetic/include/boost_161_pthread_condition_variable_fwd.h
  /opt/ros/kinetic/include/geometry_msgs/Point.h
  /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
  /opt/ros/kinetic/include/geometry_msgs/Pose.h

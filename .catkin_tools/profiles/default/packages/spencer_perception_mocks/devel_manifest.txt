@@ -1,0 +1,4 @@
+spencer_people_tracking/simulation/spencer_perception_mocks
+/home/wwh/qqq/devel/.private/spencer_perception_mocks/share/spencer_perception_mocks/cmake/spencer_perception_mocksConfig-version.cmake /home/wwh/qqq/devel/share/spencer_perception_mocks/cmake/spencer_perception_mocksConfig-version.cmake
+/home/wwh/qqq/devel/.private/spencer_perception_mocks/share/spencer_perception_mocks/cmake/spencer_perception_mocksConfig.cmake /home/wwh/qqq/devel/share/spencer_perception_mocks/cmake/spencer_perception_mocksConfig.cmake
+/home/wwh/qqq/devel/.private/spencer_perception_mocks/lib/pkgconfig/spencer_perception_mocks.pc /home/wwh/qqq/devel/lib/pkgconfig/spencer_perception_mocks.pc

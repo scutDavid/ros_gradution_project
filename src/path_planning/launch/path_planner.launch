@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- this launch file corresponds to robot model in ros-pkg/robot_descriptions/pr2/erratic_defs/robots for full erratic -->
+  
+  <param name="path_planning" value="true" />
+ 
+  <node name="rviz" pkg="rviz" type="rviz" args="-d /home/wwh/.rviz/2.rviz"/>
+
+  <node name="env_node" pkg="path_planning" type="env_node"/>
+  
+  <node name="rrt_node" pkg="path_planning" type="rrt_node" />
+
+  	
+
+</launch>
+

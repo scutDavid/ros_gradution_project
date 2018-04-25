@@ -1,0 +1,6 @@
+set(spencer_detected_person_association_SETUP_PY_VERSION "1.0.8")
+set(spencer_detected_person_association_SETUP_PY_SCRIPTS "")
+set(spencer_detected_person_association_SETUP_PY_PACKAGES "spencer_detected_person_association")
+set(spencer_detected_person_association_SETUP_PY_PACKAGE_DIRS "src/spencer_detected_person_association")
+set(spencer_detected_person_association_SETUP_PY_MODULES "")
+set(spencer_detected_person_association_SETUP_PY_MODULE_DIRS "")

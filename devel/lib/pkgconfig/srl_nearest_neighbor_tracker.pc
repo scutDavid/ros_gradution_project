@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/devel
+
+Name: srl_nearest_neighbor_tracker
+Description: Description of srl_nearest_neighbor_tracker
+Version: 1.0.8
+Cflags: 
+Libs: -L/home/wwh/qqq/devel/lib 
+Requires: 

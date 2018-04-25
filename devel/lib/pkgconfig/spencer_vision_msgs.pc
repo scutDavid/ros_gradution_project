@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/devel
+
+Name: spencer_vision_msgs
+Description: Description of spencer_vision_msgs
+Version: 1.0.8
+Cflags: -I/home/wwh/qqq/devel/include
+Libs: -L/home/wwh/qqq/devel/lib 
+Requires: roscpp std_msgs sensor_msgs geometry_msgs message_runtime

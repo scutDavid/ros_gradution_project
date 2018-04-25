@@ -44,6 +44,7 @@ struct ARequest_
 
 
 
+
   typedef boost::shared_ptr< ::qq::ARequest_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::qq::ARequest_<ContainerAllocator> const> ConstPtr;
 

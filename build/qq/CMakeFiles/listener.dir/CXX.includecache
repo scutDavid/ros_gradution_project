@@ -6,30 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/wwh/qqq/devel/include/qq/Num.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-
 /home/wwh/qqq/src/qq/src/listener.cpp
 ros/ros.h
 /home/wwh/qqq/src/qq/src/ros/ros.h
 std_msgs/String.h
 /home/wwh/qqq/src/qq/src/std_msgs/String.h
 sensor_msgs/LaserEcho.h
--
-/home/wwh/qqq/devel/include/qq/Num.h
 -
 string
 -

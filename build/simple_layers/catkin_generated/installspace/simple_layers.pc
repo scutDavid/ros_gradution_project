@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/install
+
+Name: simple_layers
+Description: Description of simple_layers
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/wwh/qqq/install/lib 
+Requires: 

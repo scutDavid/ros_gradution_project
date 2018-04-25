@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/install
+
+Name: srl_laser_detectors
+Description: Description of srl_laser_detectors
+Version: 1.0.8
+Cflags: 
+Libs: -L/home/wwh/qqq/install/lib 
+Requires: roscpp sensor_msgs srl_laser_segmentation message_filters message_runtime

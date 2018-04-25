@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/devel
+
+Name: rwth_ground_plane
+Description: Description of rwth_ground_plane
+Version: 1.0.8
+Cflags: -I/home/wwh/qqq/src/spencer_people_tracking/utils/rwth_ground_plane/include
+Libs: -L/home/wwh/qqq/devel/lib 
+Requires: 

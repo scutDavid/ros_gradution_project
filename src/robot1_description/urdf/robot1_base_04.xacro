@@ -248,7 +248,6 @@
     <odometryTopic>odom</odometryTopic> 
     <odometryFrame>odom</odometryFrame> 
     <broadcastTF>true</broadcastTF>  
-    <broadcastTF>0</broadcastTF>
   </plugin>
 </gazebo>
 

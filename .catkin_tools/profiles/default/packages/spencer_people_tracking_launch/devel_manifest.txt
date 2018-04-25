@@ -1,0 +1,4 @@
+spencer_people_tracking/launch/spencer_people_tracking_launch
+/home/wwh/qqq/devel/.private/spencer_people_tracking_launch/share/spencer_people_tracking_launch/cmake/spencer_people_tracking_launchConfig.cmake /home/wwh/qqq/devel/share/spencer_people_tracking_launch/cmake/spencer_people_tracking_launchConfig.cmake
+/home/wwh/qqq/devel/.private/spencer_people_tracking_launch/share/spencer_people_tracking_launch/cmake/spencer_people_tracking_launchConfig-version.cmake /home/wwh/qqq/devel/share/spencer_people_tracking_launch/cmake/spencer_people_tracking_launchConfig-version.cmake
+/home/wwh/qqq/devel/.private/spencer_people_tracking_launch/lib/pkgconfig/spencer_people_tracking_launch.pc /home/wwh/qqq/devel/lib/pkgconfig/spencer_people_tracking_launch.pc

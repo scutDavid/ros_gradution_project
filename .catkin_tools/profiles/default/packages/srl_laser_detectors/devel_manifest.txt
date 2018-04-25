@@ -1,0 +1,7 @@
+spencer_people_tracking/detection/laser_detectors/srl_laser_detectors
+/home/wwh/qqq/devel/.private/srl_laser_detectors/share/srl_laser_detectors/cmake/srl_laser_detectorsConfig.cmake /home/wwh/qqq/devel/share/srl_laser_detectors/cmake/srl_laser_detectorsConfig.cmake
+/home/wwh/qqq/devel/.private/srl_laser_detectors/share/srl_laser_detectors/cmake/srl_laser_detectorsConfig-version.cmake /home/wwh/qqq/devel/share/srl_laser_detectors/cmake/srl_laser_detectorsConfig-version.cmake
+/home/wwh/qqq/devel/.private/srl_laser_detectors/lib/pkgconfig/srl_laser_detectors.pc /home/wwh/qqq/devel/lib/pkgconfig/srl_laser_detectors.pc
+/home/wwh/qqq/devel/.private/srl_laser_detectors/lib/srl_laser_detectors/blob_detector /home/wwh/qqq/devel/lib/srl_laser_detectors/blob_detector
+/home/wwh/qqq/devel/.private/srl_laser_detectors/lib/srl_laser_detectors/detector /home/wwh/qqq/devel/lib/srl_laser_detectors/detector
+/home/wwh/qqq/devel/.private/srl_laser_detectors/lib/srl_laser_detectors/train_detector /home/wwh/qqq/devel/lib/srl_laser_detectors/train_detector

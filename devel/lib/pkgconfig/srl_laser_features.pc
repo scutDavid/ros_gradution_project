@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/devel
+
+Name: srl_laser_features
+Description: Description of srl_laser_features
+Version: 1.0.8
+Cflags: -I/home/wwh/qqq/src/spencer_people_tracking/detection/laser_detectors/srl_laser_features/include
+Libs: -L/home/wwh/qqq/devel/lib -lsrl_laser_features
+Requires: roscpp eigen_conversions

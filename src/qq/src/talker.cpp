@@ -4,7 +4,11 @@
 #include<iostream>
 #include <sstream>
 #include "/home/wwh/qqq/devel/include/qq/Num.h"
-
+#include <math.h>
+#include <stdlib.h>
+#include   <ctime>   
+using namespace std;
+#define random(a,b) (rand()%(b-a+1)+a)
 /**
  * This tutorial demonstrates simple sending of messages over the ROS system.
  */
@@ -55,6 +59,12 @@ int main(int argc, char **argv)
    * A count of how many messages we have sent. This is used to create
    * a unique string for each message.
    */
+   srand((unsigned)time(NULL));
+     for(int j=0;j<10;j++)
+     {
+        for(int i = 0; i < 10;i++ ) 
+            cout << random(1,100)<< '\t'; 
+        cout << endl;} 
   int count = 0;
   while (ros::ok()) //���CTRL+C,ros::ok()�᷵��False
   {
@@ -80,8 +90,11 @@ int main(int argc, char **argv)
      * given as a template parameter to the advertise<>() call, as was done
      * in the constructor above.
      */
+    // srand((unsigned)time(NULL));
     chatter_pub.publish(msg);
-
+    // for(int i = 0; i < 10;i++ ) 
+    //             cout << random(1,100)<< '\t'; 
+    cout << endl; 
     ros::spinOnce();
 
     loop_rate.sleep();

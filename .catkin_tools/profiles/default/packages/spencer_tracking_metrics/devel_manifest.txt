@@ -1,0 +1,5 @@
+spencer_people_tracking/tracking/people/spencer_tracking_metrics
+/home/wwh/qqq/devel/.private/spencer_tracking_metrics/share/spencer_tracking_metrics/cmake/spencer_tracking_metricsConfig.cmake /home/wwh/qqq/devel/share/spencer_tracking_metrics/cmake/spencer_tracking_metricsConfig.cmake
+/home/wwh/qqq/devel/.private/spencer_tracking_metrics/share/spencer_tracking_metrics/cmake/spencer_tracking_metricsConfig-version.cmake /home/wwh/qqq/devel/share/spencer_tracking_metrics/cmake/spencer_tracking_metricsConfig-version.cmake
+/home/wwh/qqq/devel/.private/spencer_tracking_metrics/lib/pkgconfig/spencer_tracking_metrics.pc /home/wwh/qqq/devel/lib/pkgconfig/spencer_tracking_metrics.pc
+/home/wwh/qqq/devel/.private/spencer_tracking_metrics/lib/python2.7/dist-packages/spencer_tracking_metrics/__init__.py /home/wwh/qqq/devel/lib/python2.7/dist-packages/spencer_tracking_metrics/__init__.py

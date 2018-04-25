@@ -14,8 +14,74 @@
 # EXTERNAL cache entries
 ########################
 
+//The threading library used by boost-thread
+BOOST_THREAD_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.so
+
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
+
+//Boost atomic library (debug)
+Boost_ATOMIC_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_atomic.so
+
+//Boost atomic library (release)
+Boost_ATOMIC_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_atomic.so
+
+//Boost chrono library (debug)
+Boost_CHRONO_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_chrono.so
+
+//Boost chrono library (release)
+Boost_CHRONO_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_chrono.so
+
+//Boost date_time library (debug)
+Boost_DATE_TIME_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_date_time.so
+
+//Boost date_time library (release)
+Boost_DATE_TIME_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_date_time.so
+
+//Boost filesystem library (debug)
+Boost_FILESYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+
+//Boost filesystem library (release)
+Boost_FILESYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+//Boost iostreams library (debug)
+Boost_IOSTREAMS_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+
+//Boost iostreams library (release)
+Boost_IOSTREAMS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+
+//Boost library directory DEBUG
+Boost_LIBRARY_DIR_DEBUG:PATH=/usr/lib/x86_64-linux-gnu
+
+//Boost library directory RELEASE
+Boost_LIBRARY_DIR_RELEASE:PATH=/usr/lib/x86_64-linux-gnu
+
+//Boost regex library (debug)
+Boost_REGEX_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_regex.so
+
+//Boost regex library (release)
+Boost_REGEX_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_regex.so
+
+//Boost serialization library (debug)
+Boost_SERIALIZATION_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_serialization.so
+
+//Boost serialization library (release)
+Boost_SERIALIZATION_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_serialization.so
+
+//Boost system library (debug)
+Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
+
+//Boost system library (release)
+Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
+
+//Boost thread library (debug)
+Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
+
+//Boost thread library (release)
+Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
 
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
@@ -37,7 +103,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
 // CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
-CMAKE_BUILD_TYPE:STRING=Debug
+CMAKE_BUILD_TYPE:STRING=
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -183,120 +249,11 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Compile device code in 64 bit mode
-CUDA_64_BIT_DEVICE_CODE:BOOL=ON
-
-//Attach the build rule to the CUDA source file.  Enable only when
-// the CUDA source file is added to at most one target.
-CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE:BOOL=ON
-
-//Generate and parse .cubin files in Device mode.
-CUDA_BUILD_CUBIN:BOOL=OFF
-
-//Build in Emulation mode
-CUDA_BUILD_EMULATION:BOOL=OFF
-
-//"cudart" library
-CUDA_CUDART_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libcudart.so
-
-//"cuda" library (older versions only).
-CUDA_CUDA_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcuda.so
-
-//Directory to put all the output files.  If blank it will default
-// to the CMAKE_CURRENT_BINARY_DIR
-CUDA_GENERATED_OUTPUT_DIR:PATH=
-
-//Generated file extension
-CUDA_HOST_COMPILATION_CPP:BOOL=ON
-
-//Host side compiler used by NVCC
-CUDA_HOST_COMPILER:FILEPATH=/usr/bin/cc
-
-//Path to a program.
-CUDA_NVCC_EXECUTABLE:FILEPATH=/usr/local/cuda/bin/nvcc
-
-//Semi-colon delimit multiple arguments.
-CUDA_NVCC_FLAGS:STRING=
-
-//Semi-colon delimit multiple arguments.
-CUDA_NVCC_FLAGS_DEBUG:STRING=
-
-//Semi-colon delimit multiple arguments.
-CUDA_NVCC_FLAGS_MINSIZEREL:STRING=
-
-//Semi-colon delimit multiple arguments.
-CUDA_NVCC_FLAGS_RELEASE:STRING=
-
-//Semi-colon delimit multiple arguments.
-CUDA_NVCC_FLAGS_RELWITHDEBINFO:STRING=
-
-//Propage C/CXX_FLAGS and friends to the host compiler via -Xcompile
-CUDA_PROPAGATE_HOST_FLAGS:BOOL=ON
-
 //Path to a file.
-CUDA_SDK_ROOT_DIR:PATH=CUDA_SDK_ROOT_DIR-NOTFOUND
-
-//Compile CUDA objects with separable compilation enabled.  Requires
-// CUDA 5.0+
-CUDA_SEPARABLE_COMPILATION:BOOL=OFF
-
-//Specify the name of the class of CPU architecture for which the
-// input files must be compiled.
-CUDA_TARGET_CPU_ARCH:STRING=
-
-//Path to a file.
-CUDA_TOOLKIT_INCLUDE:PATH=/usr/local/cuda/include
-
-//Toolkit location.
-CUDA_TOOLKIT_ROOT_DIR:PATH=/usr/local/cuda
-
-//Toolkit target location.
-CUDA_TOOLKIT_TARGET_DIR:PATH=/usr/local/cuda
-
-//Use the static version of the CUDA runtime library if available
-CUDA_USE_STATIC_CUDA_RUNTIME:BOOL=ON
-
-//Print out the commands run while compiling the CUDA source file.
-//  With the Makefile generator this defaults to VERBOSE variable
-// specified on the command line, but can be forced on with this
-// option.
-CUDA_VERBOSE_BUILD:BOOL=OFF
-
-//Version of CUDA as computed from nvcc.
-CUDA_VERSION:STRING=8.0
-
-//"cublas" library
-CUDA_cublas_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libcublas.so
-
-//static CUDA runtime library
-CUDA_cudart_static_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libcudart_static.a
-
-//"cufft" library
-CUDA_cufft_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libcufft.so
-
-//"cupti" library
-CUDA_cupti_LIBRARY:FILEPATH=/usr/local/cuda/extras/CUPTI/lib64/libcupti.so
-
-//"curand" library
-CUDA_curand_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libcurand.so
-
-//"cusolver" library
-CUDA_cusolver_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libcusolver.so
-
-//"cusparse" library
-CUDA_cusparse_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libcusparse.so
-
-//"nppc" library
-CUDA_nppc_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnppc.so
-
-//"nppi" library
-CUDA_nppi_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnppi.so
-
-//"npps" library
-CUDA_npps_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnpps.so
+DAVIDSDK_INCLUDE_DIR:PATH=DAVIDSDK_INCLUDE_DIR-NOTFOUND
 
 //Path to a library.
-CUDA_rt_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
+DAVIDSDK_LIBRARY:FILEPATH=DAVIDSDK_LIBRARY-NOTFOUND
 
 //Path to a program.
 DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
@@ -304,11 +261,35 @@ DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
 //Doxygen found
 DOXYGEN_FOUND:BOOL=TRUE
 
+//DepthSense SDK directory
+DSSDK_DIR:PATH=DSSDK_DIR-NOTFOUND
+
+//Path to a file.
+EIGEN_INCLUDE_DIR:PATH=/usr/include/eigen3
+
 //Path to a program.
 EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
 
 //Empy script
 EMPY_SCRIPT:STRING=/usr/bin/empy
+
+//Path to a file.
+ENSENSO_INCLUDE_DIR:PATH=ENSENSO_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+ENSENSO_LIBRARY:FILEPATH=ENSENSO_LIBRARY-NOTFOUND
+
+//Path to a file.
+FLANN_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+FLANN_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libflann_cpp.so
+
+//Path to a library.
+FLANN_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libflann_cpp.so
+
+//The directory containing a CMake configuration file for GMock.
+GMock_DIR:PATH=GMock_DIR-NOTFOUND
 
 //Path to a file.
 GTEST_INCLUDE_DIR:PATH=/usr/include
@@ -325,6 +306,18 @@ GTEST_MAIN_LIBRARY:FILEPATH=GTEST_MAIN_LIBRARY-NOTFOUND
 //Path to a library.
 GTEST_MAIN_LIBRARY_DEBUG:FILEPATH=GTEST_MAIN_LIBRARY_DEBUG-NOTFOUND
 
+//Path to a file.
+LIBSVM_INCLUDE_DIR:PATH=/usr/include/libsvm
+
+//LibSVM library location
+LIBSVM_LIBRARY:FILEPATH=/usr/lib/libsvm.so
+
+//Path to a file.
+LIBUSB_1_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+LIBUSB_1_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libusb-1.0.so
+
 //lsb_release executable was found
 LSB_FOUND:BOOL=TRUE
 
@@ -334,11 +327,223 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 
-//The directory containing a CMake configuration file for OpenCV3.
-OpenCV3_DIR:PATH=OpenCV3_DIR-NOTFOUND
+//Path to a file.
+OPENNI2_INCLUDE_DIR:PATH=/usr/include/openni2
+
+//Path to a library.
+OPENNI2_LIBRARY:FILEPATH=/usr/lib/libOpenNI2.so
+
+//Path to a file.
+OPENNI_INCLUDE_DIR:PATH=/usr/include/ni
+
+//Path to a library.
+OPENNI_LIBRARY:FILEPATH=/usr/lib/libOpenNI.so
+
+//Path where debug 3rdpaty OpenCV dependencies are located
+OpenCV_3RDPARTY_LIB_DIR_DBG:PATH=
+
+//Path where release 3rdpaty OpenCV dependencies are located
+OpenCV_3RDPARTY_LIB_DIR_OPT:PATH=
+
+OpenCV_CONFIG_PATH:FILEPATH=/usr/local/opencv2/share/OpenCV
 
 //The directory containing a CMake configuration file for OpenCV.
-OpenCV_DIR:PATH=/opt/ros/kinetic/share/OpenCV-3.3.1
+OpenCV_DIR:PATH=/opt/ros/kinetic/share/OpenCV-3.3.1-dev
+
+//Path where debug OpenCV libraries are located
+OpenCV_LIB_DIR_DBG:PATH=
+
+//Path where release OpenCV libraries are located
+OpenCV_LIB_DIR_OPT:PATH=
+
+//path to 2d headers
+PCL_2D_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to apps headers
+PCL_APPS_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_apps library
+PCL_APPS_LIBRARY:FILEPATH=/usr/local/lib/libpcl_apps.so
+
+//path to pcl_apps library debug
+PCL_APPS_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_apps.so
+
+//path to common headers
+PCL_COMMON_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_common library
+PCL_COMMON_LIBRARY:FILEPATH=/usr/local/lib/libpcl_common.so
+
+//path to pcl_common library debug
+PCL_COMMON_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_common.so
+
+//The directory containing a CMake configuration file for PCL.
+PCL_DIR:PATH=/usr/local/share/pcl-1.8
+
+//path to features headers
+PCL_FEATURES_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_features library
+PCL_FEATURES_LIBRARY:FILEPATH=/usr/local/lib/libpcl_features.so
+
+//path to pcl_features library debug
+PCL_FEATURES_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_features.so
+
+//path to filters headers
+PCL_FILTERS_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_filters library
+PCL_FILTERS_LIBRARY:FILEPATH=/usr/local/lib/libpcl_filters.so
+
+//path to pcl_filters library debug
+PCL_FILTERS_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_filters.so
+
+//path to geometry headers
+PCL_GEOMETRY_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to io headers
+PCL_IO_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_io library
+PCL_IO_LIBRARY:FILEPATH=/usr/local/lib/libpcl_io.so
+
+//path to pcl_io library debug
+PCL_IO_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_io.so
+
+//path to kdtree headers
+PCL_KDTREE_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_kdtree library
+PCL_KDTREE_LIBRARY:FILEPATH=/usr/local/lib/libpcl_kdtree.so
+
+//path to pcl_kdtree library debug
+PCL_KDTREE_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_kdtree.so
+
+//path to keypoints headers
+PCL_KEYPOINTS_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_keypoints library
+PCL_KEYPOINTS_LIBRARY:FILEPATH=/usr/local/lib/libpcl_keypoints.so
+
+//path to pcl_keypoints library debug
+PCL_KEYPOINTS_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_keypoints.so
+
+//path to ml headers
+PCL_ML_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_ml library
+PCL_ML_LIBRARY:FILEPATH=/usr/local/lib/libpcl_ml.so
+
+//path to pcl_ml library debug
+PCL_ML_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_ml.so
+
+//path to octree headers
+PCL_OCTREE_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_octree library
+PCL_OCTREE_LIBRARY:FILEPATH=/usr/local/lib/libpcl_octree.so
+
+//path to pcl_octree library debug
+PCL_OCTREE_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_octree.so
+
+//path to outofcore headers
+PCL_OUTOFCORE_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_outofcore library
+PCL_OUTOFCORE_LIBRARY:FILEPATH=/usr/local/lib/libpcl_outofcore.so
+
+//path to pcl_outofcore library debug
+PCL_OUTOFCORE_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_outofcore.so
+
+//path to people headers
+PCL_PEOPLE_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_people library
+PCL_PEOPLE_LIBRARY:FILEPATH=/usr/local/lib/libpcl_people.so
+
+//path to pcl_people library debug
+PCL_PEOPLE_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_people.so
+
+//path to recognition headers
+PCL_RECOGNITION_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_recognition library
+PCL_RECOGNITION_LIBRARY:FILEPATH=/usr/local/lib/libpcl_recognition.so
+
+//path to pcl_recognition library debug
+PCL_RECOGNITION_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_recognition.so
+
+//path to registration headers
+PCL_REGISTRATION_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_registration library
+PCL_REGISTRATION_LIBRARY:FILEPATH=/usr/local/lib/libpcl_registration.so
+
+//path to pcl_registration library debug
+PCL_REGISTRATION_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_registration.so
+
+//path to sample_consensus headers
+PCL_SAMPLE_CONSENSUS_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_sample_consensus library
+PCL_SAMPLE_CONSENSUS_LIBRARY:FILEPATH=/usr/local/lib/libpcl_sample_consensus.so
+
+//path to pcl_sample_consensus library debug
+PCL_SAMPLE_CONSENSUS_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_sample_consensus.so
+
+//path to search headers
+PCL_SEARCH_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_search library
+PCL_SEARCH_LIBRARY:FILEPATH=/usr/local/lib/libpcl_search.so
+
+//path to pcl_search library debug
+PCL_SEARCH_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_search.so
+
+//path to segmentation headers
+PCL_SEGMENTATION_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_segmentation library
+PCL_SEGMENTATION_LIBRARY:FILEPATH=/usr/local/lib/libpcl_segmentation.so
+
+//path to pcl_segmentation library debug
+PCL_SEGMENTATION_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_segmentation.so
+
+//path to stereo headers
+PCL_STEREO_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_stereo library
+PCL_STEREO_LIBRARY:FILEPATH=/usr/local/lib/libpcl_stereo.so
+
+//path to pcl_stereo library debug
+PCL_STEREO_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_stereo.so
+
+//path to surface headers
+PCL_SURFACE_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_surface library
+PCL_SURFACE_LIBRARY:FILEPATH=/usr/local/lib/libpcl_surface.so
+
+//path to pcl_surface library debug
+PCL_SURFACE_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_surface.so
+
+//path to tracking headers
+PCL_TRACKING_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_tracking library
+PCL_TRACKING_LIBRARY:FILEPATH=/usr/local/lib/libpcl_tracking.so
+
+//path to pcl_tracking library debug
+PCL_TRACKING_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_tracking.so
+
+//path to visualization headers
+PCL_VISUALIZATION_INCLUDE_DIR:PATH=/usr/local/include/pcl-1.8
+
+//path to pcl_visualization library
+PCL_VISUALIZATION_LIBRARY:FILEPATH=/usr/local/lib/libpcl_visualization.so
+
+//path to pcl_visualization library debug
+PCL_VISUALIZATION_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libpcl_visualization.so
 
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
@@ -355,11 +560,659 @@ Project_BINARY_DIR:STATIC=/home/wwh/qqq/build
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/wwh/qqq/src
 
+//QHull include dir.
+QHULL_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+QHULL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libqhull.so
+
+//Path to a library.
+QHULL_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libqhull.so
+
+//Path to a library.
+QT_ARTHURPLUGIN_PLUGIN_DEBUG:FILEPATH=QT_ARTHURPLUGIN_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_ARTHURPLUGIN_PLUGIN_RELEASE:FILEPATH=QT_ARTHURPLUGIN_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_CONTAINEREXTENSION_PLUGIN_DEBUG:FILEPATH=QT_CONTAINEREXTENSION_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_CONTAINEREXTENSION_PLUGIN_RELEASE:FILEPATH=QT_CONTAINEREXTENSION_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_CUSTOMWIDGETPLUGIN_PLUGIN_DEBUG:FILEPATH=QT_CUSTOMWIDGETPLUGIN_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_CUSTOMWIDGETPLUGIN_PLUGIN_RELEASE:FILEPATH=QT_CUSTOMWIDGETPLUGIN_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a program.
+QT_DBUSCPP2XML_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/qdbuscpp2xml
+
+//Path to a program.
+QT_DBUSXML2CPP_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/qdbusxml2cpp
+
+//Path to a program.
+QT_DESIGNER_EXECUTABLE:FILEPATH=QT_DESIGNER_EXECUTABLE-NOTFOUND
+
+//The location of the Qt docs
+QT_DOC_DIR:PATH=/usr/share/qt4/doc
+
+//The location of the Qt imports
+QT_IMPORTS_DIR:PATH=
+
+//Path to a program.
+QT_LINGUIST_EXECUTABLE:FILEPATH=QT_LINGUIST_EXECUTABLE-NOTFOUND
+
+//Path to a program.
+QT_LRELEASE_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/lrelease
+
+//Path to a program.
+QT_LUPDATE_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/lupdate
+
+//The location of the Qt mkspecs containing qconfig.pri
+QT_MKSPECS_DIR:PATH=/usr/share/qt4/mkspecs
+
+//Path to a program.
+QT_MOC_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/moc
+
+//Path to a library.
+QT_PHONONWIDGETS_PLUGIN_DEBUG:FILEPATH=QT_PHONONWIDGETS_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_PHONONWIDGETS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/designer/libphononwidgets.so
+
+//Path to a file.
+QT_PHONON_INCLUDE_DIR:PATH=/usr/include/qt4/phonon
+
+//The Qt PHONON library
+QT_PHONON_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libphonon.so
+
+//Path to a library.
+QT_PHONON_LIBRARY_DEBUG:FILEPATH=QT_PHONON_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_PHONON_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libphonon.so
+
+//The location of the Qt plugins
+QT_PLUGINS_DIR:PATH=/usr/lib/x86_64-linux-gnu/qt4/plugins
+
+//Path to a library.
+QT_QCNCODECS_PLUGIN_DEBUG:FILEPATH=QT_QCNCODECS_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QCNCODECS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/codecs/libqcncodecs.so
+
+//Path to a program.
+QT_QCOLLECTIONGENERATOR_EXECUTABLE:FILEPATH=QT_QCOLLECTIONGENERATOR_EXECUTABLE-NOTFOUND
+
+//Path to a library.
+QT_QCOREWLANBEARER_PLUGIN_DEBUG:FILEPATH=QT_QCOREWLANBEARER_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QCOREWLANBEARER_PLUGIN_RELEASE:FILEPATH=QT_QCOREWLANBEARER_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_QDECLARATIVEVIEW_PLUGIN_DEBUG:FILEPATH=QT_QDECLARATIVEVIEW_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QDECLARATIVEVIEW_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/designer/libqdeclarativeview.so
+
+//Path to a library.
+QT_QDECORATIONDEFAULT_PLUGIN_DEBUG:FILEPATH=QT_QDECORATIONDEFAULT_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QDECORATIONDEFAULT_PLUGIN_RELEASE:FILEPATH=QT_QDECORATIONDEFAULT_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_QDECORATIONWINDOWS_PLUGIN_DEBUG:FILEPATH=QT_QDECORATIONWINDOWS_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QDECORATIONWINDOWS_PLUGIN_RELEASE:FILEPATH=QT_QDECORATIONWINDOWS_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_QGENERICBEARER_PLUGIN_DEBUG:FILEPATH=QT_QGENERICBEARER_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QGENERICBEARER_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/bearer/libqgenericbearer.so
+
+//Path to a library.
+QT_QGIF_PLUGIN_DEBUG:FILEPATH=QT_QGIF_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QGIF_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqgif.so
+
+//Path to a library.
+QT_QGLGRAPHICSSYSTEM_PLUGIN_DEBUG:FILEPATH=QT_QGLGRAPHICSSYSTEM_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QGLGRAPHICSSYSTEM_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/graphicssystems/libqglgraphicssystem.so
+
+//Path to a library.
+QT_QICO_PLUGIN_DEBUG:FILEPATH=QT_QICO_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QICO_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqico.so
+
+//Path to a library.
+QT_QIMSW_MULTI_PLUGIN_DEBUG:FILEPATH=QT_QIMSW_MULTI_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QIMSW_MULTI_PLUGIN_RELEASE:FILEPATH=QT_QIMSW_MULTI_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_QJPCODECS_PLUGIN_DEBUG:FILEPATH=QT_QJPCODECS_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QJPCODECS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/codecs/libqjpcodecs.so
+
+//Path to a library.
+QT_QJPEG_PLUGIN_DEBUG:FILEPATH=QT_QJPEG_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QJPEG_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqjpeg.so
+
+//Path to a library.
+QT_QKRCODECS_PLUGIN_DEBUG:FILEPATH=QT_QKRCODECS_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QKRCODECS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/codecs/libqkrcodecs.so
+
+//Where can the qmake-qt4 library be found
+QT_QMAKE_EXECUTABLE:FILEPATH=/usr/bin/qmake-qt4
+
+//Path to a library.
+QT_QMNG_PLUGIN_DEBUG:FILEPATH=QT_QMNG_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QMNG_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqmng.so
+
+//Path to a library.
+QT_QNATIVEWIFIBEARER_PLUGIN_DEBUG:FILEPATH=QT_QNATIVEWIFIBEARER_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QNATIVEWIFIBEARER_PLUGIN_RELEASE:FILEPATH=QT_QNATIVEWIFIBEARER_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_QSQLDB2_PLUGIN_DEBUG:FILEPATH=QT_QSQLDB2_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QSQLDB2_PLUGIN_RELEASE:FILEPATH=QT_QSQLDB2_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_QSQLIBASE_PLUGIN_DEBUG:FILEPATH=QT_QSQLIBASE_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QSQLIBASE_PLUGIN_RELEASE:FILEPATH=QT_QSQLIBASE_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_QSQLITE2_PLUGIN_DEBUG:FILEPATH=QT_QSQLITE2_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QSQLITE2_PLUGIN_RELEASE:FILEPATH=QT_QSQLITE2_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_QSQLITE_PLUGIN_DEBUG:FILEPATH=QT_QSQLITE_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QSQLITE_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/sqldrivers/libqsqlite.so
+
+//Path to a library.
+QT_QSQLMYSQL_PLUGIN_DEBUG:FILEPATH=QT_QSQLMYSQL_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QSQLMYSQL_PLUGIN_RELEASE:FILEPATH=QT_QSQLMYSQL_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_QSQLOCI_PLUGIN_DEBUG:FILEPATH=QT_QSQLOCI_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QSQLOCI_PLUGIN_RELEASE:FILEPATH=QT_QSQLOCI_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_QSQLODBC_PLUGIN_DEBUG:FILEPATH=QT_QSQLODBC_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QSQLODBC_PLUGIN_RELEASE:FILEPATH=QT_QSQLODBC_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_QSQLPSQL_PLUGIN_DEBUG:FILEPATH=QT_QSQLPSQL_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QSQLPSQL_PLUGIN_RELEASE:FILEPATH=QT_QSQLPSQL_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_QSQLTDS_PLUGIN_DEBUG:FILEPATH=QT_QSQLTDS_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QSQLTDS_PLUGIN_RELEASE:FILEPATH=QT_QSQLTDS_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_QSVGICON_PLUGIN_DEBUG:FILEPATH=QT_QSVGICON_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QSVGICON_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/iconengines/libqsvgicon.so
+
+//Path to a library.
+QT_QSVG_PLUGIN_DEBUG:FILEPATH=QT_QSVG_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QSVG_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqsvg.so
+
+//Path to a library.
+QT_QT3SUPPORTWIDGETS_PLUGIN_DEBUG:FILEPATH=QT_QT3SUPPORTWIDGETS_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QT3SUPPORTWIDGETS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/designer/libqt3supportwidgets.so
+
+//Path to a file.
+QT_QT3SUPPORT_INCLUDE_DIR:PATH=/usr/include/qt4/Qt3Support
+
+//The Qt QT3SUPPORT library
+QT_QT3SUPPORT_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQt3Support.so
+
+//Path to a library.
+QT_QT3SUPPORT_LIBRARY_DEBUG:FILEPATH=QT_QT3SUPPORT_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QT3SUPPORT_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQt3Support.so
+
+//Path to a library.
+QT_QTACCESSIBLECOMPATWIDGETS_PLUGIN_DEBUG:FILEPATH=QT_QTACCESSIBLECOMPATWIDGETS_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTACCESSIBLECOMPATWIDGETS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/accessible/libqtaccessiblecompatwidgets.so
+
+//Path to a library.
+QT_QTACCESSIBLEWIDGETS_PLUGIN_DEBUG:FILEPATH=QT_QTACCESSIBLEWIDGETS_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTACCESSIBLEWIDGETS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/accessible/libqtaccessiblewidgets.so
+
+//Path to a file.
+QT_QTASSISTANTCLIENT_INCLUDE_DIR:PATH=QT_QTASSISTANTCLIENT_INCLUDE_DIR-NOTFOUND
+
+//The Qt QTASSISTANTCLIENT library
+QT_QTASSISTANTCLIENT_LIBRARY:STRING=
+
+//Path to a library.
+QT_QTASSISTANTCLIENT_LIBRARY_DEBUG:FILEPATH=QT_QTASSISTANTCLIENT_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTASSISTANTCLIENT_LIBRARY_RELEASE:FILEPATH=QT_QTASSISTANTCLIENT_LIBRARY_RELEASE-NOTFOUND
+
+//Path to a file.
+QT_QTASSISTANT_INCLUDE_DIR:PATH=QT_QTASSISTANT_INCLUDE_DIR-NOTFOUND
+
+//The Qt QTASSISTANT library
+QT_QTASSISTANT_LIBRARY:STRING=
+
+//Path to a library.
+QT_QTASSISTANT_LIBRARY_DEBUG:FILEPATH=QT_QTASSISTANT_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTASSISTANT_LIBRARY_RELEASE:FILEPATH=QT_QTASSISTANT_LIBRARY_RELEASE-NOTFOUND
+
+//The Qt QTCLUCENE library
+QT_QTCLUCENE_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtCLucene.so
+
+//Path to a library.
+QT_QTCLUCENE_LIBRARY_DEBUG:FILEPATH=QT_QTCLUCENE_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTCLUCENE_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtCLucene.so
+
+//Path to a file.
+QT_QTCORE_INCLUDE_DIR:PATH=/usr/include/qt4/QtCore
+
+//The Qt QTCORE library
+QT_QTCORE_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtCore.so
+
+//Path to a library.
+QT_QTCORE_LIBRARY_DEBUG:FILEPATH=QT_QTCORE_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTCORE_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtCore.so
+
+//Path to a file.
+QT_QTDBUS_INCLUDE_DIR:PATH=/usr/include/qt4/QtDBus
+
+//The Qt QTDBUS library
+QT_QTDBUS_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtDBus.so
+
+//Path to a library.
+QT_QTDBUS_LIBRARY_DEBUG:FILEPATH=QT_QTDBUS_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTDBUS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtDBus.so
+
+//Path to a file.
+QT_QTDECLARATIVE_INCLUDE_DIR:PATH=/usr/include/qt4/QtDeclarative
+
+//The Qt QTDECLARATIVE library
+QT_QTDECLARATIVE_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtDeclarative.so
+
+//Path to a library.
+QT_QTDECLARATIVE_LIBRARY_DEBUG:FILEPATH=QT_QTDECLARATIVE_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTDECLARATIVE_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtDeclarative.so
+
+//Path to a file.
+QT_QTDESIGNERCOMPONENTS_INCLUDE_DIR:PATH=/usr/include/qt4/QtDesigner
+
+//The Qt QTDESIGNERCOMPONENTS library
+QT_QTDESIGNERCOMPONENTS_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtDesignerComponents.so
+
+//Path to a library.
+QT_QTDESIGNERCOMPONENTS_LIBRARY_DEBUG:FILEPATH=QT_QTDESIGNERCOMPONENTS_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTDESIGNERCOMPONENTS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtDesignerComponents.so
+
+//Path to a file.
+QT_QTDESIGNER_INCLUDE_DIR:PATH=/usr/include/qt4/QtDesigner
+
+//The Qt QTDESIGNER library
+QT_QTDESIGNER_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtDesigner.so
+
+//Path to a library.
+QT_QTDESIGNER_LIBRARY_DEBUG:FILEPATH=QT_QTDESIGNER_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTDESIGNER_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtDesigner.so
+
+//Path to a library.
+QT_QTGA_PLUGIN_DEBUG:FILEPATH=QT_QTGA_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTGA_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqtga.so
+
+//Path to a file.
+QT_QTGUI_INCLUDE_DIR:PATH=/usr/include/qt4/QtGui
+
+//The Qt QTGUI library
+QT_QTGUI_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtGui.so
+
+//Path to a library.
+QT_QTGUI_LIBRARY_DEBUG:FILEPATH=QT_QTGUI_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTGUI_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtGui.so
+
+//Path to a file.
+QT_QTHELP_INCLUDE_DIR:PATH=/usr/include/qt4/QtHelp
+
+//The Qt QTHELP library
+QT_QTHELP_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtHelp.so
+
+//Path to a library.
+QT_QTHELP_LIBRARY_DEBUG:FILEPATH=QT_QTHELP_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTHELP_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtHelp.so
+
+//Path to a library.
+QT_QTIFF_PLUGIN_DEBUG:FILEPATH=QT_QTIFF_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTIFF_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqtiff.so
+
+//Path to a file.
+QT_QTMOTIF_INCLUDE_DIR:PATH=QT_QTMOTIF_INCLUDE_DIR-NOTFOUND
+
+//The Qt QTMOTIF library
+QT_QTMOTIF_LIBRARY:STRING=
+
+//Path to a library.
+QT_QTMOTIF_LIBRARY_DEBUG:FILEPATH=QT_QTMOTIF_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTMOTIF_LIBRARY_RELEASE:FILEPATH=QT_QTMOTIF_LIBRARY_RELEASE-NOTFOUND
+
+//Path to a file.
+QT_QTMULTIMEDIA_INCLUDE_DIR:PATH=QT_QTMULTIMEDIA_INCLUDE_DIR-NOTFOUND
+
+//The Qt QTMULTIMEDIA library
+QT_QTMULTIMEDIA_LIBRARY:STRING=
+
+//Path to a library.
+QT_QTMULTIMEDIA_LIBRARY_DEBUG:FILEPATH=QT_QTMULTIMEDIA_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTMULTIMEDIA_LIBRARY_RELEASE:FILEPATH=QT_QTMULTIMEDIA_LIBRARY_RELEASE-NOTFOUND
+
+//Path to a file.
+QT_QTNETWORK_INCLUDE_DIR:PATH=/usr/include/qt4/QtNetwork
+
+//The Qt QTNETWORK library
+QT_QTNETWORK_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtNetwork.so
+
+//Path to a library.
+QT_QTNETWORK_LIBRARY_DEBUG:FILEPATH=QT_QTNETWORK_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTNETWORK_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtNetwork.so
+
+//Path to a file.
+QT_QTNSPLUGIN_INCLUDE_DIR:PATH=QT_QTNSPLUGIN_INCLUDE_DIR-NOTFOUND
+
+//The Qt QTNSPLUGIN library
+QT_QTNSPLUGIN_LIBRARY:STRING=
+
+//Path to a library.
+QT_QTNSPLUGIN_LIBRARY_DEBUG:FILEPATH=QT_QTNSPLUGIN_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTNSPLUGIN_LIBRARY_RELEASE:FILEPATH=QT_QTNSPLUGIN_LIBRARY_RELEASE-NOTFOUND
+
+//Path to a file.
+QT_QTOPENGL_INCLUDE_DIR:PATH=/usr/include/qt4/QtOpenGL
+
+//The Qt QTOPENGL library
+QT_QTOPENGL_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtOpenGL.so
+
+//Path to a library.
+QT_QTOPENGL_LIBRARY_DEBUG:FILEPATH=QT_QTOPENGL_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTOPENGL_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtOpenGL.so
+
+//Path to a library.
+QT_QTRACEGRAPHICSSYSTEM_PLUGIN_DEBUG:FILEPATH=QT_QTRACEGRAPHICSSYSTEM_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTRACEGRAPHICSSYSTEM_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/graphicssystems/libqtracegraphicssystem.so
+
+//Path to a library.
+QT_QTSCRIPTDBUS_PLUGIN_DEBUG:FILEPATH=QT_QTSCRIPTDBUS_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTSCRIPTDBUS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/script/libqtscriptdbus.so
+
+//Path to a file.
+QT_QTSCRIPTTOOLS_INCLUDE_DIR:PATH=/usr/include/qt4/QtScriptTools
+
+//The Qt QTSCRIPTTOOLS library
+QT_QTSCRIPTTOOLS_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtScriptTools.so
+
+//Path to a library.
+QT_QTSCRIPTTOOLS_LIBRARY_DEBUG:FILEPATH=QT_QTSCRIPTTOOLS_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTSCRIPTTOOLS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtScriptTools.so
+
+//Path to a file.
+QT_QTSCRIPT_INCLUDE_DIR:PATH=/usr/include/qt4/QtScript
+
+//The Qt QTSCRIPT library
+QT_QTSCRIPT_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtScript.so
+
+//Path to a library.
+QT_QTSCRIPT_LIBRARY_DEBUG:FILEPATH=QT_QTSCRIPT_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTSCRIPT_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtScript.so
+
+//Path to a file.
+QT_QTSQL_INCLUDE_DIR:PATH=/usr/include/qt4/QtSql
+
+//The Qt QTSQL library
+QT_QTSQL_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtSql.so
+
+//Path to a library.
+QT_QTSQL_LIBRARY_DEBUG:FILEPATH=QT_QTSQL_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTSQL_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtSql.so
+
+//Path to a file.
+QT_QTSVG_INCLUDE_DIR:PATH=/usr/include/qt4/QtSvg
+
+//The Qt QTSVG library
+QT_QTSVG_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtSvg.so
+
+//Path to a library.
+QT_QTSVG_LIBRARY_DEBUG:FILEPATH=QT_QTSVG_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTSVG_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtSvg.so
+
+//Path to a file.
+QT_QTTEST_INCLUDE_DIR:PATH=/usr/include/qt4/QtTest
+
+//The Qt QTTEST library
+QT_QTTEST_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtTest.so
+
+//Path to a library.
+QT_QTTEST_LIBRARY_DEBUG:FILEPATH=QT_QTTEST_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTTEST_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtTest.so
+
+//Path to a file.
+QT_QTUITOOLS_INCLUDE_DIR:PATH=/usr/include/qt4/QtUiTools
+
+//The Qt QTUITOOLS library
+QT_QTUITOOLS_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtUiTools.a
+
+//Path to a library.
+QT_QTUITOOLS_LIBRARY_DEBUG:FILEPATH=QT_QTUITOOLS_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTUITOOLS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtUiTools.a
+
+//Path to a library.
+QT_QTWCODECS_PLUGIN_DEBUG:FILEPATH=QT_QTWCODECS_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTWCODECS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/codecs/libqtwcodecs.so
+
+//Path to a file.
+QT_QTWEBKIT_INCLUDE_DIR:PATH=/usr/include/qt4/QtWebKit
+
+//The Qt QTWEBKIT library
+QT_QTWEBKIT_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtWebKit.so
+
+//Path to a library.
+QT_QTWEBKIT_LIBRARY_DEBUG:FILEPATH=QT_QTWEBKIT_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTWEBKIT_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtWebKit.so
+
+//Path to a file.
+QT_QTXMLPATTERNS_INCLUDE_DIR:PATH=/usr/include/qt4/QtXmlPatterns
+
+//The Qt QTXMLPATTERNS library
+QT_QTXMLPATTERNS_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtXmlPatterns.so
+
+//Path to a library.
+QT_QTXMLPATTERNS_LIBRARY_DEBUG:FILEPATH=QT_QTXMLPATTERNS_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTXMLPATTERNS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtXmlPatterns.so
+
+//Path to a file.
+QT_QTXML_INCLUDE_DIR:PATH=/usr/include/qt4/QtXml
+
+//The Qt QTXML library
+QT_QTXML_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtXml.so
+
+//Path to a library.
+QT_QTXML_LIBRARY_DEBUG:FILEPATH=QT_QTXML_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QTXML_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtXml.so
+
+//Path to a library.
+QT_QWEBVIEW_PLUGIN_DEBUG:FILEPATH=QT_QWEBVIEW_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QWEBVIEW_PLUGIN_RELEASE:FILEPATH=QT_QWEBVIEW_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a library.
+QT_QWSTSLIBMOUSEHANDLER_PLUGIN_DEBUG:FILEPATH=QT_QWSTSLIBMOUSEHANDLER_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_QWSTSLIBMOUSEHANDLER_PLUGIN_RELEASE:FILEPATH=QT_QWSTSLIBMOUSEHANDLER_PLUGIN_RELEASE-NOTFOUND
+
+//Path to a program.
+QT_RCC_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/rcc
+
+//Path to a library.
+QT_TASKMENUEXTENSION_PLUGIN_DEBUG:FILEPATH=QT_TASKMENUEXTENSION_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_TASKMENUEXTENSION_PLUGIN_RELEASE:FILEPATH=QT_TASKMENUEXTENSION_PLUGIN_RELEASE-NOTFOUND
+
+//The location of the Qt translations
+QT_TRANSLATIONS_DIR:PATH=/usr/share/qt4/translations
+
+//Path to a program.
+QT_UIC3_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/uic3
+
+//Path to a program.
+QT_UIC_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/uic
+
+//Path to a library.
+QT_WORLDTIMECLOCKPLUGIN_PLUGIN_DEBUG:FILEPATH=QT_WORLDTIMECLOCKPLUGIN_PLUGIN_DEBUG-NOTFOUND
+
+//Path to a library.
+QT_WORLDTIMECLOCKPLUGIN_PLUGIN_RELEASE:FILEPATH=QT_WORLDTIMECLOCKPLUGIN_PLUGIN_RELEASE-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5Core.
+Qt5Core_DIR:PATH=/home/wwh/anaconda3/lib/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=/home/wwh/anaconda3/lib/cmake/Qt5Gui
+
+//The directory containing a CMake configuration file for Qt5Sql.
+Qt5Sql_DIR:PATH=/home/wwh/anaconda3/lib/cmake/Qt5Sql
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=/home/wwh/anaconda3/lib/cmake/Qt5Widgets
+
+//The directory containing a CMake configuration file for Qt5.
+Qt5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
+
+//RealSense SDK directory
+RSSDK_DIR:PATH=RSSDK_DIR-NOTFOUND
+
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
 
 //Enable debian style python package layout
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
+
+//Path to a file.
+TIFF_INCLUDE_DIR:PATH=/usr/include/x86_64-linux-gnu
+
+//Path to a library.
+TIFF_LIBRARY_DEBUG:FILEPATH=TIFF_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+TIFF_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libtiff.so
 
 //LSB Distrib tag
 UBUNTU:BOOL=TRUE
@@ -368,16 +1221,46 @@ UBUNTU:BOOL=TRUE
 UBUNTU_XENIAL:BOOL=TRUE
 
 //Path to a file.
-_CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
+USB_10_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+USB_10_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libusb-1.0.so
+
+//The directory containing VTKConfig.cmake
+VTK_DIR:PATH=/home/wwh/VTK-8.1.0/release
 
 //Path to a file.
-_CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
+_gmock_INCLUDES:FILEPATH=/usr/include/gmock/gmock.h
+
+//Path to a file.
+_gmock_SOURCES:FILEPATH=/usr/src/gmock/src/gmock.cc
+
+//Path to a file.
+_gtest_INCLUDES:FILEPATH=/usr/include/gtest/gtest.h
+
+//Path to a file.
+_gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
 
 //The directory containing a CMake configuration file for actionlib.
 actionlib_DIR:PATH=/opt/ros/kinetic/share/actionlib/cmake
 
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/kinetic/share/actionlib_msgs/cmake
+
+//Value Computed by CMake
+actor_plugin_BINARY_DIR:STATIC=/home/wwh/qqq/build/actor_plugin
+
+//Value Computed by CMake
+actor_plugin_SOURCE_DIR:STATIC=/home/wwh/qqq/src/actor_plugin
+
+//Value Computed by CMake
+actor_services_BINARY_DIR:STATIC=/home/wwh/qqq/build/actor_services
+
+//The directory containing a CMake configuration file for actor_services.
+actor_services_DIR:PATH=actor_services_DIR-NOTFOUND
+
+//Value Computed by CMake
+actor_services_SOURCE_DIR:STATIC=/home/wwh/qqq/src/actor_services
 
 //The directory containing a CMake configuration file for angles.
 angles_DIR:PATH=/opt/ros/kinetic/share/angles/cmake
@@ -387,12 +1270,6 @@ bond_DIR:PATH=/opt/ros/kinetic/share/bond/cmake
 
 //The directory containing a CMake configuration file for bondcpp.
 bondcpp_DIR:PATH=/opt/ros/kinetic/share/bondcpp/cmake
-
-//Value Computed by CMake
-c5_BINARY_DIR:STATIC=/home/wwh/qqq/build/c5
-
-//Value Computed by CMake
-c5_SOURCE_DIR:STATIC=/home/wwh/qqq/src/c5
 
 //Value Computed by CMake
 c8_BINARY_DIR:STATIC=/home/wwh/qqq/build/c8
@@ -415,23 +1292,14 @@ camera_info_manager_DIR:PATH=/opt/ros/kinetic/share/camera_info_manager/cmake
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
 
-//Value Computed by CMake
-chapter5_tutorials_BINARY_DIR:STATIC=/home/wwh/qqq/build/chapter5_tutorials
-
-//Value Computed by CMake
-chapter5_tutorials_SOURCE_DIR:STATIC=/home/wwh/qqq/src/chapter5_tutorials
-
-//Value Computed by CMake
-chapter8_tutorials_BINARY_DIR:STATIC=/home/wwh/qqq/build/c8
-
-//Value Computed by CMake
-chapter8_tutorials_SOURCE_DIR:STATIC=/home/wwh/qqq/src/c8
-
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/kinetic/share/class_loader/cmake
 
-//The directory containing a CMake configuration file for convex_decomposition.
-convex_decomposition_DIR:PATH=/opt/ros/kinetic/share/convex_decomposition/cmake
+//The directory containing a CMake configuration file for cmake_modules.
+cmake_modules_DIR:PATH=/opt/ros/kinetic/share/cmake_modules/cmake
+
+//The directory containing a CMake configuration file for costmap_2d.
+costmap_2d_DIR:PATH=/opt/ros/kinetic/share/costmap_2d/cmake
 
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
@@ -439,11 +1307,17 @@ cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
 //The directory containing a CMake configuration file for cv_bridge.
 cv_bridge_DIR:PATH=/opt/ros/kinetic/share/cv_bridge/cmake
 
+//The directory containing a CMake configuration file for diagnostic_msgs.
+diagnostic_msgs_DIR:PATH=/opt/ros/kinetic/share/diagnostic_msgs/cmake
+
+//The directory containing a CMake configuration file for diagnostic_updater.
+diagnostic_updater_DIR:PATH=/opt/ros/kinetic/share/diagnostic_updater/cmake
+
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/kinetic/share/dynamic_reconfigure/cmake
 
-//The directory containing a CMake configuration file for erratic_gazebo_plugins.
-erratic_gazebo_plugins_DIR:PATH=erratic_gazebo_plugins_DIR-NOTFOUND
+//The directory containing a CMake configuration file for eigen_conversions.
+eigen_conversions_DIR:PATH=/opt/ros/kinetic/share/eigen_conversions/cmake
 
 //The directory containing a CMake configuration file for fake_localization.
 fake_localization_DIR:PATH=/opt/ros/kinetic/share/fake_localization/cmake
@@ -451,23 +1325,11 @@ fake_localization_DIR:PATH=/opt/ros/kinetic/share/fake_localization/cmake
 //The directory containing a CMake configuration file for filters.
 filters_DIR:PATH=/opt/ros/kinetic/share/filters/cmake
 
-//Value Computed by CMake
-first_pkg_BINARY_DIR:STATIC=/home/wwh/qqq/build/qq
-
-//Value Computed by CMake
-first_pkg_SOURCE_DIR:STATIC=/home/wwh/qqq/src/qq
-
 //The directory containing a CMake configuration file for gazebo_msgs.
 gazebo_msgs_DIR:PATH=/opt/ros/kinetic/share/gazebo_msgs/cmake
 
 //The directory containing a CMake configuration file for gazebo_ros.
 gazebo_ros_DIR:PATH=/opt/ros/kinetic/share/gazebo_ros/cmake
-
-//The directory containing a CMake configuration file for gazebo_ros_pkg.
-gazebo_ros_pkg_DIR:PATH=gazebo_ros_pkg_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for gazebo_worlds.
-gazebo_worlds_DIR:PATH=gazebo_worlds_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/kinetic/share/gencpp/cmake
@@ -491,7 +1353,22 @@ genpy_DIR:PATH=/opt/ros/kinetic/share/genpy/cmake
 geometry_msgs_DIR:PATH=/opt/ros/kinetic/share/geometry_msgs/cmake
 
 //Value Computed by CMake
-gtest_BINARY_DIR:STATIC=/home/wwh/qqq/build/gtest
+gmock_BINARY_DIR:STATIC=/home/wwh/qqq/build/gtest
+
+//Dependencies for the target
+gmock_LIB_DEPENDS:STATIC=general;-lpthread;
+
+//Value Computed by CMake
+gmock_SOURCE_DIR:STATIC=/usr/src/gmock
+
+//Build all of Google Mock's own tests.
+gmock_build_tests:BOOL=OFF
+
+//Dependencies for the target
+gmock_main_LIB_DEPENDS:STATIC=general;-lpthread;
+
+//Value Computed by CMake
+gtest_BINARY_DIR:STATIC=/home/wwh/qqq/build/gtest/gtest
 
 //Dependencies for the target
 gtest_LIB_DEPENDS:STATIC=general;-lpthread;
@@ -515,11 +1392,17 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//The directory containing a CMake configuration file for image_geometry.
+image_geometry_DIR:PATH=/opt/ros/kinetic/share/image_geometry/cmake
+
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/kinetic/share/image_transport/cmake
 
-//The directory containing a CMake configuration file for ivcon.
-ivcon_DIR:PATH=/opt/ros/kinetic/share/ivcon/cmake
+//The directory containing a CMake configuration file for interactive_markers.
+interactive_markers_DIR:PATH=/opt/ros/kinetic/share/interactive_markers/cmake
+
+//The directory containing a CMake configuration file for kdl_conversions.
+kdl_conversions_DIR:PATH=/opt/ros/kinetic/share/kdl_conversions/cmake
 
 //The directory containing a CMake configuration file for kdl_parser.
 kdl_parser_DIR:PATH=/opt/ros/kinetic/share/kdl_parser/cmake
@@ -532,6 +1415,9 @@ laser_geometry_DIR:PATH=/opt/ros/kinetic/share/laser_geometry/cmake
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/kinetic/lib/librosconsole_bridge.so
+
+//The directory containing a CMake configuration file for map_msgs.
+map_msgs_DIR:PATH=/opt/ros/kinetic/share/map_msgs/cmake
 
 //The directory containing a CMake configuration file for map_server.
 map_server_DIR:PATH=/opt/ros/kinetic/share/map_server/cmake
@@ -554,20 +1440,32 @@ nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
 //The directory containing a CMake configuration file for nodelet.
 nodelet_DIR:PATH=/opt/ros/kinetic/share/nodelet/cmake
 
+//Value Computed by CMake
+path_planning_BINARY_DIR:STATIC=/home/wwh/qqq/build/path_planning/path_planning
+
+//Dependencies for target
+path_planning_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+path_planning_SOURCE_DIR:STATIC=/home/wwh/qqq/src/path_planning/path_planning
+
 //The directory containing a CMake configuration file for pcl_conversions.
 pcl_conversions_DIR:PATH=/opt/ros/kinetic/share/pcl_conversions/cmake
 
 //The directory containing a CMake configuration file for pcl_msgs.
 pcl_msgs_DIR:PATH=/opt/ros/kinetic/share/pcl_msgs/cmake
 
+//Value Computed by CMake
+pcl_people_detector_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/detection/rgbd_detectors/pcl_people_detector
+
+//Value Computed by CMake
+pcl_people_detector_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/detection/rgbd_detectors/pcl_people_detector
+
 //The directory containing a CMake configuration file for pcl_ros.
 pcl_ros_DIR:PATH=/opt/ros/kinetic/share/pcl_ros/cmake
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
-
-//The directory containing a CMake configuration file for pr2_gazebo_plugins.
-pr2_gazebo_plugins_DIR:PATH=/opt/ros/kinetic/share/pr2_gazebo_plugins/cmake
 
 //Value Computed by CMake
 qq_BINARY_DIR:STATIC=/home/wwh/qqq/build/qq
@@ -589,9 +1487,6 @@ robot1_gazebo_BINARY_DIR:STATIC=/home/wwh/qqq/build/robot1_gazebo
 
 //Value Computed by CMake
 robot1_gazebo_SOURCE_DIR:STATIC=/home/wwh/qqq/src/robot1_gazebo
-
-//The directory containing a CMake configuration file for robot_self_filter.
-robot_self_filter_DIR:PATH=/opt/ros/kinetic/share/robot_self_filter/cmake
 
 //The directory containing a CMake configuration file for robot_state_publisher.
 robot_state_publisher_DIR:PATH=/opt/ros/kinetic/share/robot_state_publisher/cmake
@@ -638,11 +1533,236 @@ rospy_DIR:PATH=/opt/ros/kinetic/share/rospy/cmake
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/kinetic/share/rostime/cmake
 
+//Value Computed by CMake
+rrt_exploration_BINARY_DIR:STATIC=/home/wwh/qqq/build/rrt_exploration
+
+//Value Computed by CMake
+rrt_exploration_SOURCE_DIR:STATIC=/home/wwh/qqq/src/rrt_exploration
+
+//The directory containing a CMake configuration file for rviz.
+rviz_DIR:PATH=/opt/ros/kinetic/share/rviz/cmake
+
+//Value Computed by CMake
+rwth_ground_hog_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/detection/monocular_detectors/rwth_ground_hog
+
+//Value Computed by CMake
+rwth_ground_hog_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/detection/monocular_detectors/rwth_ground_hog
+
+//Value Computed by CMake
+rwth_ground_plane_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/utils/rwth_ground_plane
+
+//Value Computed by CMake
+rwth_ground_plane_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/utils/rwth_ground_plane
+
+//Value Computed by CMake
+rwth_perception_people_msgs_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/messages/rwth_perception_people_msgs
+
+//The directory containing a CMake configuration file for rwth_perception_people_msgs.
+rwth_perception_people_msgs_DIR:PATH=/home/wwh/qqq/devel/share/rwth_perception_people_msgs/cmake
+
+//Value Computed by CMake
+rwth_perception_people_msgs_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/messages/rwth_perception_people_msgs
+
+//Value Computed by CMake
+rwth_upper_body_detector_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/detection/rgbd_detectors/rwth_upper_body_detector
+
+//Value Computed by CMake
+rwth_upper_body_detector_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/detection/rgbd_detectors/rwth_upper_body_detector
+
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
 
+//Value Computed by CMake
+simple_layers_BINARY_DIR:STATIC=/home/wwh/qqq/build/simple_layers
+
+//Dependencies for target
+simple_layers_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+simple_layers_SOURCE_DIR:STATIC=/home/wwh/qqq/src/simple_layers
+
 //The directory containing a CMake configuration file for smclib.
 smclib_DIR:PATH=/opt/ros/kinetic/share/smclib/cmake
+
+//Value Computed by CMake
+spencer_bagfile_tools_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/utils/spencer_bagfile_tools
+
+//Value Computed by CMake
+spencer_bagfile_tools_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/utils/spencer_bagfile_tools
+
+//Value Computed by CMake
+spencer_control_msgs_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/messages/spencer_control_msgs
+
+//The directory containing a CMake configuration file for spencer_control_msgs.
+spencer_control_msgs_DIR:PATH=/home/wwh/qqq/devel/share/spencer_control_msgs/cmake
+
+//Value Computed by CMake
+spencer_control_msgs_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/messages/spencer_control_msgs
+
+//Value Computed by CMake
+spencer_detected_person_association_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/detection/spencer_detected_person_association
+
+//Dependencies for the target
+spencer_detected_person_association_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libnodeletlib.so;general;/opt/ros/kinetic/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/kinetic/lib/libeigen_conversions.so;general;/opt/ros/kinetic/lib/libtf_conversions.so;general;/opt/ros/kinetic/lib/libkdl_conversions.so;general;/opt/ros/kinetic/lib/liborocos-kdl.so.1.3.0;general;/opt/ros/kinetic/lib/libtf.so;general;/opt/ros/kinetic/lib/libtf2_ros.so;general;/opt/ros/kinetic/lib/libactionlib.so;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libtf2.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+
+//Value Computed by CMake
+spencer_detected_person_association_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/detection/spencer_detected_person_association
+
+//Value Computed by CMake
+spencer_detected_person_conversion_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/detection/spencer_detected_person_conversion
+
+//Value Computed by CMake
+spencer_detected_person_conversion_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/detection/spencer_detected_person_conversion
+
+//Value Computed by CMake
+spencer_diagnostics_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/utils/spencer_diagnostics
+
+//The directory containing a CMake configuration file for spencer_diagnostics.
+spencer_diagnostics_DIR:PATH=/home/wwh/qqq/devel/share/spencer_diagnostics/cmake
+
+//Dependencies for the target
+spencer_diagnostics_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libtf.so;general;/opt/ros/kinetic/lib/libtf2_ros.so;general;/opt/ros/kinetic/lib/libactionlib.so;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/opt/ros/kinetic/lib/libtf2.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+
+//Value Computed by CMake
+spencer_diagnostics_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/utils/spencer_diagnostics
+
+//Value Computed by CMake
+spencer_group_tracking_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/tracking/groups/spencer_group_tracking
+
+//Value Computed by CMake
+spencer_group_tracking_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/tracking/groups/spencer_group_tracking
+
+//Value Computed by CMake
+spencer_human_attribute_msgs_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/messages/spencer_human_attribute_msgs
+
+//The directory containing a CMake configuration file for spencer_human_attribute_msgs.
+spencer_human_attribute_msgs_DIR:PATH=/home/wwh/qqq/devel/share/spencer_human_attribute_msgs/cmake
+
+//Value Computed by CMake
+spencer_human_attribute_msgs_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/messages/spencer_human_attribute_msgs
+
+//Value Computed by CMake
+spencer_leg_detector_wrapper_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/detection/laser_detectors/spencer_leg_detector_wrapper
+
+//Value Computed by CMake
+spencer_leg_detector_wrapper_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/detection/laser_detectors/spencer_leg_detector_wrapper
+
+//Value Computed by CMake
+spencer_people_tracking_full_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/utils/spencer_people_tracking_full
+
+//Value Computed by CMake
+spencer_people_tracking_full_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/utils/spencer_people_tracking_full
+
+//Value Computed by CMake
+spencer_people_tracking_launch_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/launch/spencer_people_tracking_launch
+
+//Value Computed by CMake
+spencer_people_tracking_launch_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/launch/spencer_people_tracking_launch
+
+//Value Computed by CMake
+spencer_perception_mocks_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/simulation/spencer_perception_mocks
+
+//Value Computed by CMake
+spencer_perception_mocks_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/simulation/spencer_perception_mocks
+
+//Value Computed by CMake
+spencer_social_relation_msgs_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/messages/spencer_social_relation_msgs
+
+//The directory containing a CMake configuration file for spencer_social_relation_msgs.
+spencer_social_relation_msgs_DIR:PATH=/home/wwh/qqq/devel/share/spencer_social_relation_msgs/cmake
+
+//Value Computed by CMake
+spencer_social_relation_msgs_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/messages/spencer_social_relation_msgs
+
+//Value Computed by CMake
+spencer_social_relations_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/tracking/groups/spencer_social_relations
+
+//Value Computed by CMake
+spencer_social_relations_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/tracking/groups/spencer_social_relations
+
+//Value Computed by CMake
+spencer_tracking_metrics_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/tracking/people/spencer_tracking_metrics
+
+//Value Computed by CMake
+spencer_tracking_metrics_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/tracking/people/spencer_tracking_metrics
+
+//Value Computed by CMake
+spencer_tracking_msgs_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/messages/spencer_tracking_msgs
+
+//The directory containing a CMake configuration file for spencer_tracking_msgs.
+spencer_tracking_msgs_DIR:PATH=/home/wwh/qqq/devel/share/spencer_tracking_msgs/cmake
+
+//Value Computed by CMake
+spencer_tracking_msgs_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/messages/spencer_tracking_msgs
+
+//Value Computed by CMake
+spencer_tracking_rviz_plugin_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/visualization/spencer_tracking_rviz_plugin
+
+//Dependencies for the target
+spencer_tracking_rviz_plugin_LIB_DEPENDS:STATIC=general;Qt5::Widgets;general;/opt/ros/kinetic/lib/librviz.so;general;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;general;/usr/lib/x86_64-linux-gnu/libOgreMain.so;general;/usr/lib/x86_64-linux-gnu/libGLU.so;general;/usr/lib/x86_64-linux-gnu/libGL.so;general;/opt/ros/kinetic/lib/libimage_transport.so;general;/opt/ros/kinetic/lib/libinteractive_markers.so;general;/opt/ros/kinetic/lib/liblaser_geometry.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/kinetic/lib/libresource_retriever.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/opt/ros/kinetic/lib/libtf.so;general;/opt/ros/kinetic/lib/libtf2_ros.so;general;/opt/ros/kinetic/lib/libactionlib.so;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/opt/ros/kinetic/lib/libtf2.so;general;/opt/ros/kinetic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/kinetic/lib/librosconsole_bridge.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+
+//Value Computed by CMake
+spencer_tracking_rviz_plugin_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/visualization/spencer_tracking_rviz_plugin
+
+//Value Computed by CMake
+spencer_tracking_utils_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/tracking/people/spencer_tracking_utils
+
+//Value Computed by CMake
+spencer_tracking_utils_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/tracking/people/spencer_tracking_utils
+
+//Value Computed by CMake
+spencer_vision_msgs_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/messages/spencer_vision_msgs
+
+//The directory containing a CMake configuration file for spencer_vision_msgs.
+spencer_vision_msgs_DIR:PATH=/home/wwh/qqq/devel/share/spencer_vision_msgs/cmake
+
+//Value Computed by CMake
+spencer_vision_msgs_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/messages/spencer_vision_msgs
+
+//Value Computed by CMake
+srl_laser_detectors_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/detection/laser_detectors/srl_laser_detectors
+
+//Value Computed by CMake
+srl_laser_detectors_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/detection/laser_detectors/srl_laser_detectors
+
+//Value Computed by CMake
+srl_laser_features_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/detection/laser_detectors/srl_laser_features
+
+//The directory containing a CMake configuration file for srl_laser_features.
+srl_laser_features_DIR:PATH=/home/wwh/qqq/devel/share/srl_laser_features/cmake
+
+//Dependencies for the target
+srl_laser_features_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/kinetic/lib/libeigen_conversions.so;general;/opt/ros/kinetic/lib/liborocos-kdl.so.1.3.0;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+
+//Value Computed by CMake
+srl_laser_features_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/detection/laser_detectors/srl_laser_features
+
+//Value Computed by CMake
+srl_laser_segmentation_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/detection/laser_detectors/srl_laser_segmentation
+
+//The directory containing a CMake configuration file for srl_laser_segmentation.
+srl_laser_segmentation_DIR:PATH=/home/wwh/qqq/devel/share/srl_laser_segmentation/cmake
+
+//Value Computed by CMake
+srl_laser_segmentation_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/detection/laser_detectors/srl_laser_segmentation
+
+//Value Computed by CMake
+srl_nearest_neighbor_tracker_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/tracking/people/srl_nearest_neighbor_tracker
+
+//Value Computed by CMake
+srl_nearest_neighbor_tracker_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/tracking/people/srl_nearest_neighbor_tracker
+
+//Value Computed by CMake
+srl_tracking_exporter_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/visualization/srl_tracking_exporter
+
+//Value Computed by CMake
+srl_tracking_exporter_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/visualization/srl_tracking_exporter
+
+//Value Computed by CMake
+srl_tracking_logfile_import_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/tracking/people/srl_tracking_logfile_import
+
+//Value Computed by CMake
+srl_tracking_logfile_import_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/tracking/people/srl_tracking_logfile_import
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
@@ -668,8 +1788,20 @@ tf2_ros_DIR:PATH=/opt/ros/kinetic/share/tf2_ros/cmake
 //The directory containing a CMake configuration file for tf.
 tf_DIR:PATH=/opt/ros/kinetic/share/tf/cmake
 
+//The directory containing a CMake configuration file for tf_conversions.
+tf_conversions_DIR:PATH=/opt/ros/kinetic/share/tf_conversions/cmake
+
 //The directory containing a CMake configuration file for topic_tools.
 topic_tools_DIR:PATH=/opt/ros/kinetic/share/topic_tools/cmake
+
+//Value Computed by CMake
+track_annotation_tool_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/utils/track_annotation_tool
+
+//Value Computed by CMake
+track_annotation_tool_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/utils/track_annotation_tool
+
+//Dependencies for the target
+track_annotation_tool_rviz_plugin_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libQtGui.so;general;/usr/lib/x86_64-linux-gnu/libQtCore.so;general;/opt/ros/kinetic/lib/librviz.so;general;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;general;/usr/lib/x86_64-linux-gnu/libOgreMain.so;general;/usr/lib/x86_64-linux-gnu/libGLU.so;general;/usr/lib/x86_64-linux-gnu/libGL.so;general;/opt/ros/kinetic/lib/libimage_transport.so;general;/opt/ros/kinetic/lib/libinteractive_markers.so;general;/opt/ros/kinetic/lib/liblaser_geometry.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/kinetic/lib/libresource_retriever.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/opt/ros/kinetic/lib/libtf.so;general;/opt/ros/kinetic/lib/libtf2_ros.so;general;/opt/ros/kinetic/lib/libactionlib.so;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/opt/ros/kinetic/lib/libtf2.so;general;/opt/ros/kinetic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/kinetic/lib/librosconsole_bridge.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
 
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/kinetic/share/trajectory_msgs/cmake
@@ -686,8 +1818,17 @@ usb_cam_LIB_DEPENDS:STATIC=general;avcodec-ffmpeg;general;swscale-ffmpeg;general
 //Value Computed by CMake
 usb_cam_SOURCE_DIR:STATIC=/home/wwh/qqq/src/usb_cam
 
+//Value Computed by CMake
+video_to_bagfile_BINARY_DIR:STATIC=/home/wwh/qqq/build/spencer_people_tracking/utils/video_to_bagfile
+
+//Value Computed by CMake
+video_to_bagfile_SOURCE_DIR:STATIC=/home/wwh/qqq/src/spencer_people_tracking/utils/video_to_bagfile
+
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/kinetic/share/visualization_msgs/cmake
+
+//The directory containing a CMake configuration file for voxel_grid.
+voxel_grid_DIR:PATH=/opt/ros/kinetic/share/voxel_grid/cmake
 
 //The directory containing a CMake configuration file for xacro.
 xacro_DIR:PATH=/opt/ros/kinetic/share/xacro/cmake
@@ -700,6 +1841,48 @@ xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_ATOMIC_LIBRARY_DEBUG
+Boost_ATOMIC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_ATOMIC_LIBRARY_RELEASE
+Boost_ATOMIC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CHRONO_LIBRARY_DEBUG
+Boost_CHRONO_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CHRONO_LIBRARY_RELEASE
+Boost_CHRONO_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_DEBUG
+Boost_DATE_TIME_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_RELEASE
+Boost_DATE_TIME_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_DEBUG
+Boost_FILESYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_RELEASE
+Boost_FILESYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_INCLUDE_DIR
+Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_IOSTREAMS_LIBRARY_DEBUG
+Boost_IOSTREAMS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_IOSTREAMS_LIBRARY_RELEASE
+Boost_IOSTREAMS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR_DEBUG
+Boost_LIBRARY_DIR_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR_RELEASE
+Boost_LIBRARY_DIR_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_REGEX_LIBRARY_DEBUG
+Boost_REGEX_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_REGEX_LIBRARY_RELEASE
+Boost_REGEX_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_DEBUG
+Boost_SERIALIZATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_RELEASE
+Boost_SERIALIZATION_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
+Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
+Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_DEBUG
+Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
+Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/wwh/qqq/build/catkin_generated/env_cached.sh
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/wwh/qqq/build/test_results
@@ -799,7 +1982,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=44
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -838,93 +2021,121 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_64_BIT_DEVICE_CODE
-CUDA_64_BIT_DEVICE_CODE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE
-CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_BUILD_CUBIN
-CUDA_BUILD_CUBIN-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_BUILD_EMULATION
-CUDA_BUILD_EMULATION-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_CUDART_LIBRARY
-CUDA_CUDART_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_CUDA_LIBRARY
-CUDA_CUDA_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_GENERATED_OUTPUT_DIR
-CUDA_GENERATED_OUTPUT_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_HOST_COMPILATION_CPP
-CUDA_HOST_COMPILATION_CPP-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_NVCC_EXECUTABLE
-CUDA_NVCC_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_NVCC_FLAGS
-CUDA_NVCC_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_NVCC_FLAGS_DEBUG
-CUDA_NVCC_FLAGS_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_NVCC_FLAGS_MINSIZEREL
-CUDA_NVCC_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_NVCC_FLAGS_RELEASE
-CUDA_NVCC_FLAGS_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_NVCC_FLAGS_RELWITHDEBINFO
-CUDA_NVCC_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_PROPAGATE_HOST_FLAGS
-CUDA_PROPAGATE_HOST_FLAGS-ADVANCED:INTERNAL=1
-//This is the value of the last time CUDA_SDK_ROOT_DIR was set
-// successfully.
-CUDA_SDK_ROOT_DIR_INTERNAL:INTERNAL=CUDA_SDK_ROOT_DIR-NOTFOUND
-//ADVANCED property for variable: CUDA_SEPARABLE_COMPILATION
-CUDA_SEPARABLE_COMPILATION-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_TARGET_CPU_ARCH
-CUDA_TARGET_CPU_ARCH-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_TOOLKIT_INCLUDE
-CUDA_TOOLKIT_INCLUDE-ADVANCED:INTERNAL=1
-//This is the value of the last time CUDA_TOOLKIT_ROOT_DIR was
-// set successfully.
-CUDA_TOOLKIT_ROOT_DIR_INTERNAL:INTERNAL=/usr/local/cuda
-//ADVANCED property for variable: CUDA_TOOLKIT_TARGET_DIR
-CUDA_TOOLKIT_TARGET_DIR-ADVANCED:INTERNAL=1
-//This is the value of the last time CUDA_TOOLKIT_TARGET_DIR was
-// set successfully.
-CUDA_TOOLKIT_TARGET_DIR_INTERNAL:INTERNAL=/usr/local/cuda
-//ADVANCED property for variable: CUDA_VERBOSE_BUILD
-CUDA_VERBOSE_BUILD-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_VERSION
-CUDA_VERSION-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_cublas_LIBRARY
-CUDA_cublas_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_cudart_static_LIBRARY
-CUDA_cudart_static_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_cufft_LIBRARY
-CUDA_cufft_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_cupti_LIBRARY
-CUDA_cupti_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_curand_LIBRARY
-CUDA_curand_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_cusolver_LIBRARY
-CUDA_cusolver_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_cusparse_LIBRARY
-CUDA_cusparse_LIBRARY-ADVANCED:INTERNAL=1
-//Location of make2cmake.cmake
-CUDA_make2cmake:INTERNAL=/usr/share/cmake-3.5/Modules/FindCUDA/make2cmake.cmake
-//ADVANCED property for variable: CUDA_nppc_LIBRARY
-CUDA_nppc_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_nppi_LIBRARY
-CUDA_nppi_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_npps_LIBRARY
-CUDA_npps_LIBRARY-ADVANCED:INTERNAL=1
-//Location of parse_cubin.cmake
-CUDA_parse_cubin:INTERNAL=/usr/share/cmake-3.5/Modules/FindCUDA/parse_cubin.cmake
-//Location of run_nvcc.cmake
-CUDA_run_nvcc:INTERNAL=/usr/share/cmake-3.5/Modules/FindCUDA/run_nvcc.cmake
-//Details about finding CUDA
-FIND_PACKAGE_MESSAGE_DETAILS_CUDA:INTERNAL=[/usr/local/cuda][/usr/local/cuda/bin/nvcc][/usr/local/cuda/include][/usr/local/cuda/lib64/libcudart.so][v8.0(8.0)]
+CUDAHOG_CFLAGS:INTERNAL=
+CUDAHOG_CFLAGS_I:INTERNAL=
+CUDAHOG_CFLAGS_OTHER:INTERNAL=
+CUDAHOG_FOUND:INTERNAL=
+CUDAHOG_INCLUDEDIR:INTERNAL=
+CUDAHOG_LIBDIR:INTERNAL=
+CUDAHOG_LIBS:INTERNAL=
+CUDAHOG_LIBS_L:INTERNAL=
+CUDAHOG_LIBS_OTHER:INTERNAL=
+CUDAHOG_LIBS_PATHS:INTERNAL=
+CUDAHOG_PREFIX:INTERNAL=
+CUDAHOG_STATIC_CFLAGS:INTERNAL=
+CUDAHOG_STATIC_CFLAGS_I:INTERNAL=
+CUDAHOG_STATIC_CFLAGS_OTHER:INTERNAL=
+CUDAHOG_STATIC_LIBDIR:INTERNAL=
+CUDAHOG_STATIC_LIBS:INTERNAL=
+CUDAHOG_STATIC_LIBS_L:INTERNAL=
+CUDAHOG_STATIC_LIBS_OTHER:INTERNAL=
+CUDAHOG_STATIC_LIBS_PATHS:INTERNAL=
+CUDAHOG_VERSION:INTERNAL=
+CUDAHOG_cudaHOG_INCLUDEDIR:INTERNAL=
+CUDAHOG_cudaHOG_LIBDIR:INTERNAL=
+CUDAHOG_cudaHOG_PREFIX:INTERNAL=
+CUDAHOG_cudaHOG_VERSION:INTERNAL=
+//ADVANCED property for variable: DAVIDSDK_INCLUDE_DIR
+DAVIDSDK_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DAVIDSDK_LIBRARY
+DAVIDSDK_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: EIGEN_INCLUDE_DIR
+EIGEN_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//Details about finding Eigen
+FIND_PACKAGE_MESSAGE_DETAILS_Eigen:INTERNAL=[/usr/include/eigen3][v()]
+//Details about finding FLANN
+FIND_PACKAGE_MESSAGE_DETAILS_FLANN:INTERNAL=[/usr/lib/x86_64-linux-gnu/libflann_cpp.so][/usr/include][v()]
+//Details about finding LibSVM
+FIND_PACKAGE_MESSAGE_DETAILS_LibSVM:INTERNAL=[/usr/lib/libsvm.so][/usr/include/libsvm][TRUE][v()]
 //Details about finding OpenCV
 FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/opt/ros/kinetic][v3.3.1(3)]
+//Details about finding OpenNI
+FIND_PACKAGE_MESSAGE_DETAILS_OpenNI:INTERNAL=[/usr/lib/libOpenNI.so][/usr/include/ni][v()]
+//Details about finding OpenNI2
+FIND_PACKAGE_MESSAGE_DETAILS_OpenNI2:INTERNAL=[/usr/lib/libOpenNI2.so][/usr/include/openni2][v()]
+//Details about finding PCL
+FIND_PACKAGE_MESSAGE_DETAILS_PCL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_thread.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;/usr/lib/x86_64-linux-gnu/libboost_regex.so;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/local/lib/libpcl_common.so;debug;/usr/local/lib/libpcl_common.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp.so;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp.so;optimized;/usr/local/lib/libpcl_kdtree.so;debug;/usr/local/lib/libpcl_kdtree.so;optimized;/usr/local/lib/libpcl_octree.so;debug;/usr/local/lib/libpcl_octree.so;optimized;/usr/local/lib/libpcl_search.so;debug;/usr/local/lib/libpcl_search.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;optimized;/usr/local/lib/libpcl_surface.so;debug;/usr/local/lib/libpcl_surface.so;/usr/lib/libOpenNI.so;/usr/lib/libOpenNI2.so;vtksys;vtkCommonCore;vtkCommonMath;vtkCommonMisc;vtkCommonSystem;vtkCommonTransforms;vtkCommonDataModel;vtkCommonColor;vtkCommonExecutionModel;vtkCommonComputationalGeometry;vtkFiltersCore;vtkFiltersGeneral;vtkImagingCore;vtkImagingFourier;vtkalglib;vtkFiltersStatistics;vtkFiltersExtraction;vtkInfovisCore;vtkFiltersGeometry;vtkFiltersSources;vtkRenderingCore;vtkzlib;vtkfreetype;vtkRenderingFreeType;vtkRenderingContext2D;vtkChartsCore;vtkDICOMParser;vtklz4;vtkIOCore;vtkIOLegacy;vtkexpat;vtkIOXMLParser;vtkDomainsChemistry;vtkglew;vtkRenderingOpenGL2;vtkDomainsChemistryOpenGL2;vtkIOXML;vtkParallelCore;vtkFiltersAMR;vtkFiltersFlowPaths;vtkFiltersGeneric;vtkImagingSources;vtkFiltersHybrid;vtkFiltersHyperTree;vtkImagingGeneral;vtkFiltersImaging;vtkFiltersModeling;vtkFiltersParallel;vtkFiltersParallelImaging;vtkFiltersPoints;vtkFiltersProgrammable;vtkFiltersSMP;vtkFiltersSelection;vtkFiltersTexture;vtkFiltersTopology;verdict;vtkFiltersVerdict;vtkInteractionStyle;vtkGUISupportQt;vtksqlite;vtkIOSQL;vtkGUISupportQtSQL;vtkmetaio;vtkjpeg;vtkpng;vtktiff;vtkIOImage;vtkImagingHybrid;vtkInfovisLayout;vtkImagingColor;vtkRenderingAnnotation;vtkRenderingVolume;vtkInteractionWidgets;vtkViewsCore;vtkproj4;vtkGeovisCore;vtkhdf5_hl;vtkhdf5;vtkIOAMR;vtkIOEnSight;vtkNetCDF;vtkexoIIc;vtkIOExodus;vtkgl2ps;vtkRenderingGL2PSOpenGL2;vtklibharu;vtkIOExport;vtkIOExportOpenGL2;vtkIOGeometry;vtkIOImport;vtklibxml2;vtkIOInfovis;vtkIOLSDyna;vtkIOMINC;vtkoggtheora;vtkIOMovie;vtknetcdfcpp;vtkIONetCDF;vtkIOPLY;vtkjsoncpp;vtkIOParallel;vtkIOParallelXML;vtkIOTecplotTable;vtkIOVideo;vtkImagingMath;vtkImagingMorphological;vtkImagingStatistics;vtkImagingStencil;vtkInteractionImage;vtkRenderingContextOpenGL2;vtkRenderingImage;vtkRenderingLOD;vtkRenderingLabel;vtkRenderingQt;vtkRenderingVolumeOpenGL2;vtkViewsContext2D;vtkViewsInfovis;vtkViewsQt;optimized;/usr/local/lib/libpcl_io.so;debug;/usr/local/lib/libpcl_io.so;optimized;/usr/local/lib/libpcl_stereo.so;debug;/usr/local/lib/libpcl_stereo.so;optimized;/usr/local/lib/libpcl_sample_consensus.so;debug;/usr/local/lib/libpcl_sample_consensus.so;optimized;/usr/local/lib/libpcl_filters.so;debug;/usr/local/lib/libpcl_filters.so;optimized;/usr/local/lib/libpcl_features.so;debug;/usr/local/lib/libpcl_features.so;optimized;/usr/local/lib/libpcl_ml.so;debug;/usr/local/lib/libpcl_ml.so;optimized;/usr/local/lib/libpcl_segmentation.so;debug;/usr/local/lib/libpcl_segmentation.so;optimized;/usr/local/lib/libpcl_registration.so;debug;/usr/local/lib/libpcl_registration.so;optimized;/usr/local/lib/libpcl_recognition.so;debug;/usr/local/lib/libpcl_recognition.so;optimized;/usr/local/lib/libpcl_keypoints.so;debug;/usr/local/lib/libpcl_keypoints.so;optimized;/usr/local/lib/libpcl_visualization.so;debug;/usr/local/lib/libpcl_visualization.so;optimized;/usr/local/lib/libpcl_tracking.so;debug;/usr/local/lib/libpcl_tracking.so;optimized;/usr/local/lib/libpcl_apps.so;debug;/usr/local/lib/libpcl_apps.so;optimized;/usr/local/lib/libpcl_people.so;debug;/usr/local/lib/libpcl_people.so;optimized;/usr/local/lib/libpcl_outofcore.so;debug;/usr/local/lib/libpcl_outofcore.so;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_thread.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;/usr/lib/x86_64-linux-gnu/libboost_regex.so;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;/usr/lib/libOpenNI.so;/usr/lib/libOpenNI2.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp.so;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp.so;vtksys;vtkCommonCore;vtkCommonMath;vtkCommonMisc;vtkCommonSystem;vtkCommonTransforms;vtkCommonDataModel;vtkCommonColor;vtkCommonExecutionModel;vtkCommonComputationalGeometry;vtkFiltersCore;vtkFiltersGeneral;vtkImagingCore;vtkImagingFourier;vtkalglib;vtkFiltersStatistics;vtkFiltersExtraction;vtkInfovisCore;vtkFiltersGeometry;vtkFiltersSources;vtkRenderingCore;vtkzlib;vtkfreetype;vtkRenderingFreeType;vtkRenderingContext2D;vtkChartsCore;vtkDICOMParser;vtklz4;vtkIOCore;vtkIOLegacy;vtkexpat;vtkIOXMLParser;vtkDomainsChemistry;vtkglew;vtkRenderingOpenGL2;vtkDomainsChemistryOpenGL2;vtkIOXML;vtkParallelCore;vtkFiltersAMR;vtkFiltersFlowPaths;vtkFiltersGeneric;vtkImagingSources;vtkFiltersHybrid;vtkFiltersHyperTree;vtkImagingGeneral;vtkFiltersImaging;vtkFiltersModeling;vtkFiltersParallel;vtkFiltersParallelImaging;vtkFiltersPoints;vtkFiltersProgrammable;vtkFiltersSMP;vtkFiltersSelection;vtkFiltersTexture;vtkFiltersTopology;verdict;vtkFiltersVerdict;vtkInteractionStyle;vtkGUISupportQt;vtksqlite;vtkIOSQL;vtkGUISupportQtSQL;vtkmetaio;vtkjpeg;vtkpng;vtktiff;vtkIOImage;vtkImagingHybrid;vtkInfovisLayout;vtkImagingColor;vtkRenderingAnnotation;vtkRenderingVolume;vtkInteractionWidgets;vtkViewsCore;vtkproj4;vtkGeovisCore;vtkhdf5_hl;vtkhdf5;vtkIOAMR;vtkIOEnSight;vtkNetCDF;vtkexoIIc;vtkIOExodus;vtkgl2ps;vtkRenderingGL2PSOpenGL2;vtklibharu;vtkIOExport;vtkIOExportOpenGL2;vtkIOGeometry;vtkIOImport;vtklibxml2;vtkIOInfovis;vtkIOLSDyna;vtkIOMINC;vtkoggtheora;vtkIOMovie;vtknetcdfcpp;vtkIONetCDF;vtkIOPLY;vtkjsoncpp;vtkIOParallel;vtkIOParallelXML;vtkIOTecplotTable;vtkIOVideo;vtkImagingMath;vtkImagingMorphological;vtkImagingStatistics;vtkImagingStencil;vtkInteractionImage;vtkRenderingContextOpenGL2;vtkRenderingImage;vtkRenderingLOD;vtkRenderingLabel;vtkRenderingQt;vtkRenderingVolumeOpenGL2;vtkViewsContext2D;vtkViewsInfovis;vtkViewsQt][/usr/local/include/pcl-1.8;/usr/include/eigen3;/usr/include;/usr/include/ni;/usr/include/openni2;/home/wwh/VTK-8.1.0/release/Utilities/KWIML;/home/wwh/VTK-8.1.0/Utilities/KWIML;/home/wwh/VTK-8.1.0/release/Utilities/KWSys;/home/wwh/VTK-8.1.0/Utilities/KWSys;/home/wwh/VTK-8.1.0/release/Common/Core;/home/wwh/VTK-8.1.0/Common/Core;/home/wwh/VTK-8.1.0/release/Common/Math;/home/wwh/VTK-8.1.0/Common/Math;/home/wwh/VTK-8.1.0/release/Common/Misc;/home/wwh/VTK-8.1.0/Common/Misc;/home/wwh/VTK-8.1.0/release/Common/System;/home/wwh/VTK-8.1.0/Common/System;/home/wwh/VTK-8.1.0/release/Common/Transforms;/home/wwh/VTK-8.1.0/Common/Transforms;/home/wwh/VTK-8.1.0/release/Common/DataModel;/home/wwh/VTK-8.1.0/Common/DataModel;/home/wwh/VTK-8.1.0/release/Common/Color;/home/wwh/VTK-8.1.0/Common/Color;/home/wwh/VTK-8.1.0/release/Common/ExecutionModel;/home/wwh/VTK-8.1.0/Common/ExecutionModel;/home/wwh/VTK-8.1.0/release/Common/ComputationalGeometry;/home/wwh/VTK-8.1.0/Common/ComputationalGeometry;/home/wwh/VTK-8.1.0/release/Filters/Core;/home/wwh/VTK-8.1.0/Filters/Core;/home/wwh/VTK-8.1.0/release/Filters/General;/home/wwh/VTK-8.1.0/Filters/General;/home/wwh/VTK-8.1.0/release/Imaging/Core;/home/wwh/VTK-8.1.0/Imaging/Core;/home/wwh/VTK-8.1.0/release/Imaging/Fourier;/home/wwh/VTK-8.1.0/Imaging/Fourier;/home/wwh/VTK-8.1.0/release/ThirdParty/alglib;/home/wwh/VTK-8.1.0/ThirdParty/alglib;/home/wwh/VTK-8.1.0/release/Filters/Statistics;/home/wwh/VTK-8.1.0/Filters/Statistics;/home/wwh/VTK-8.1.0/release/Filters/Extraction;/home/wwh/VTK-8.1.0/Filters/Extraction;/home/wwh/VTK-8.1.0/release/Infovis/Core;/home/wwh/VTK-8.1.0/Infovis/Core;/home/wwh/VTK-8.1.0/release/Filters/Geometry;/home/wwh/VTK-8.1.0/Filters/Geometry;/home/wwh/VTK-8.1.0/release/Filters/Sources;/home/wwh/VTK-8.1.0/Filters/Sources;/home/wwh/VTK-8.1.0/release/Rendering/Core;/home/wwh/VTK-8.1.0/Rendering/Core;/home/wwh/VTK-8.1.0/release/ThirdParty/zlib;/home/wwh/VTK-8.1.0/ThirdParty/zlib;/home/wwh/VTK-8.1.0/release/ThirdParty/freetype;/home/wwh/VTK-8.1.0/ThirdParty/freetype;/home/wwh/VTK-8.1.0/release/Rendering/FreeType;/home/wwh/VTK-8.1.0/Rendering/FreeType;/home/wwh/VTK-8.1.0/release/Rendering/Context2D;/home/wwh/VTK-8.1.0/Rendering/Context2D;/home/wwh/VTK-8.1.0/release/Charts/Core;/home/wwh/VTK-8.1.0/Charts/Core;/home/wwh/VTK-8.1.0/release/Utilities/DICOMParser;/home/wwh/VTK-8.1.0/Utilities/DICOMParser;/home/wwh/VTK-8.1.0/ThirdParty/lz4/vtklz4/lib;/home/wwh/VTK-8.1.0/release/ThirdParty/lz4/vtklz4;/home/wwh/VTK-8.1.0/release/ThirdParty/lz4;/home/wwh/VTK-8.1.0/ThirdParty/lz4;/home/wwh/VTK-8.1.0/release/IO/Core;/home/wwh/VTK-8.1.0/IO/Core;/home/wwh/VTK-8.1.0/release/IO/Legacy;/home/wwh/VTK-8.1.0/IO/Legacy;/home/wwh/VTK-8.1.0/release/ThirdParty/expat;/home/wwh/VTK-8.1.0/ThirdParty/expat;/home/wwh/VTK-8.1.0/release/IO/XMLParser;/home/wwh/VTK-8.1.0/IO/XMLParser;/home/wwh/VTK-8.1.0/release/Domains/Chemistry;/home/wwh/VTK-8.1.0/Domains/Chemistry;/home/wwh/VTK-8.1.0/release/Utilities/EncodeString;/home/wwh/VTK-8.1.0/Utilities/EncodeString;/home/wwh/VTK-8.1.0/release/ThirdParty/glew;/home/wwh/VTK-8.1.0/ThirdParty/glew;/home/wwh/VTK-8.1.0/release/Rendering/OpenGL2;/home/wwh/VTK-8.1.0/Rendering/OpenGL2;/home/wwh/VTK-8.1.0/release/Domains/ChemistryOpenGL2;/home/wwh/VTK-8.1.0/Domains/ChemistryOpenGL2;/home/wwh/VTK-8.1.0/release/IO/XML;/home/wwh/VTK-8.1.0/IO/XML;/home/wwh/VTK-8.1.0/release/Utilities/HashSource;/home/wwh/VTK-8.1.0/Utilities/HashSource;/home/wwh/VTK-8.1.0/release/Parallel/Core;/home/wwh/VTK-8.1.0/Parallel/Core;/home/wwh/VTK-8.1.0/release/Filters/AMR;/home/wwh/VTK-8.1.0/Filters/AMR;/home/wwh/VTK-8.1.0/release/Filters/FlowPaths;/home/wwh/VTK-8.1.0/Filters/FlowPaths;/home/wwh/VTK-8.1.0/release/Filters/Generic;/home/wwh/VTK-8.1.0/Filters/Generic;/home/wwh/VTK-8.1.0/release/Imaging/Sources;/home/wwh/VTK-8.1.0/Imaging/Sources;/home/wwh/VTK-8.1.0/release/Filters/Hybrid;/home/wwh/VTK-8.1.0/Filters/Hybrid;/home/wwh/VTK-8.1.0/release/Filters/HyperTree;/home/wwh/VTK-8.1.0/Filters/HyperTree;/home/wwh/VTK-8.1.0/release/Imaging/General;/home/wwh/VTK-8.1.0/Imaging/General;/home/wwh/VTK-8.1.0/release/Filters/Imaging;/home/wwh/VTK-8.1.0/Filters/Imaging;/home/wwh/VTK-8.1.0/release/Filters/Modeling;/home/wwh/VTK-8.1.0/Filters/Modeling;/home/wwh/VTK-8.1.0/release/Filters/Parallel;/home/wwh/VTK-8.1.0/Filters/Parallel;/home/wwh/VTK-8.1.0/release/Filters/ParallelImaging;/home/wwh/VTK-8.1.0/Filters/ParallelImaging;/home/wwh/VTK-8.1.0/release/Filters/Points;/home/wwh/VTK-8.1.0/Filters/Points;/home/wwh/VTK-8.1.0/release/Filters/Programmable;/home/wwh/VTK-8.1.0/Filters/Programmable;/home/wwh/VTK-8.1.0/release/Filters/SMP;/home/wwh/VTK-8.1.0/Filters/SMP;/home/wwh/VTK-8.1.0/release/Filters/Selection;/home/wwh/VTK-8.1.0/Filters/Selection;/home/wwh/VTK-8.1.0/release/Filters/Texture;/home/wwh/VTK-8.1.0/Filters/Texture;/home/wwh/VTK-8.1.0/release/Filters/Topology;/home/wwh/VTK-8.1.0/Filters/Topology;/home/wwh/VTK-8.1.0/release/ThirdParty/verdict;/home/wwh/VTK-8.1.0/ThirdParty/verdict;/home/wwh/VTK-8.1.0/release/Filters/Verdict;/home/wwh/VTK-8.1.0/Filters/Verdict;/home/wwh/VTK-8.1.0/release/Interaction/Style;/home/wwh/VTK-8.1.0/Interaction/Style;/home/wwh/VTK-8.1.0/release/GUISupport/Qt;/home/wwh/VTK-8.1.0/GUISupport/Qt;/home/wwh/VTK-8.1.0/release/ThirdParty/sqlite;/home/wwh/VTK-8.1.0/ThirdParty/sqlite;/home/wwh/VTK-8.1.0/release/IO/SQL;/home/wwh/VTK-8.1.0/IO/SQL;/home/wwh/VTK-8.1.0/release/GUISupport/QtSQL;/home/wwh/VTK-8.1.0/GUISupport/QtSQL;/home/wwh/VTK-8.1.0/release/Utilities/MetaIO/vtkmetaio;/home/wwh/VTK-8.1.0/release/Utilities/MetaIO;/home/wwh/VTK-8.1.0/Utilities/MetaIO;/home/wwh/VTK-8.1.0/release/ThirdParty/jpeg;/home/wwh/VTK-8.1.0/ThirdParty/jpeg;/home/wwh/VTK-8.1.0/release/ThirdParty/png;/home/wwh/VTK-8.1.0/ThirdParty/png;/home/wwh/VTK-8.1.0/release/ThirdParty/tiff/vtktiff/libtiff;/home/wwh/VTK-8.1.0/release/ThirdParty/tiff;/home/wwh/VTK-8.1.0/ThirdParty/tiff;/home/wwh/VTK-8.1.0/release/IO/Image;/home/wwh/VTK-8.1.0/IO/Image;/home/wwh/VTK-8.1.0/release/Imaging/Hybrid;/home/wwh/VTK-8.1.0/Imaging/Hybrid;/home/wwh/VTK-8.1.0/release/Infovis/Layout;/home/wwh/VTK-8.1.0/Infovis/Layout;/home/wwh/VTK-8.1.0/release/Imaging/Color;/home/wwh/VTK-8.1.0/Imaging/Color;/home/wwh/VTK-8.1.0/release/Rendering/Annotation;/home/wwh/VTK-8.1.0/Rendering/Annotation;/home/wwh/VTK-8.1.0/release/Rendering/Volume;/home/wwh/VTK-8.1.0/Rendering/Volume;/home/wwh/VTK-8.1.0/release/Interaction/Widgets;/home/wwh/VTK-8.1.0/Interaction/Widgets;/home/wwh/VTK-8.1.0/release/Views/Core;/home/wwh/VTK-8.1.0/Views/Core;/home/wwh/VTK-8.1.0/ThirdParty/libproj4/vtklibproj4;/home/wwh/VTK-8.1.0/release/ThirdParty/libproj4/vtklibproj4;/home/wwh/VTK-8.1.0/release/ThirdParty/libproj4;/home/wwh/VTK-8.1.0/ThirdParty/libproj4;/home/wwh/VTK-8.1.0/release/Geovis/Core;/home/wwh/VTK-8.1.0/Geovis/Core;/home/wwh/VTK-8.1.0/release/ThirdParty/hdf5/vtkhdf5;/home/wwh/VTK-8.1.0/ThirdParty/hdf5/vtkhdf5/hl/src;/home/wwh/VTK-8.1.0/ThirdParty/hdf5/vtkhdf5/src;/home/wwh/VTK-8.1.0/release/ThirdParty/hdf5;/home/wwh/VTK-8.1.0/ThirdParty/hdf5;/home/wwh/VTK-8.1.0/release/IO/AMR;/home/wwh/VTK-8.1.0/IO/AMR;/home/wwh/VTK-8.1.0/release/IO/EnSight;/home/wwh/VTK-8.1.0/IO/EnSight;/home/wwh/VTK-8.1.0/ThirdParty/netcdf/vtknetcdf/include;/home/wwh/VTK-8.1.0/release/ThirdParty/netcdf/vtknetcdf;/home/wwh/VTK-8.1.0/release/ThirdParty/netcdf;/home/wwh/VTK-8.1.0/ThirdParty/netcdf;/home/wwh/VTK-8.1.0/release/ThirdParty/exodusII;/home/wwh/VTK-8.1.0/ThirdParty/exodusII;/home/wwh/VTK-8.1.0/release/IO/Exodus;/home/wwh/VTK-8.1.0/IO/Exodus;/home/wwh/VTK-8.1.0/release/ThirdParty/gl2ps;/home/wwh/VTK-8.1.0/ThirdParty/gl2ps;/home/wwh/VTK-8.1.0/release/Rendering/GL2PSOpenGL2;/home/wwh/VTK-8.1.0/Rendering/GL2PSOpenGL2;/home/wwh/VTK-8.1.0/ThirdParty/libharu/vtklibharu/include;/home/wwh/VTK-8.1.0/release/ThirdParty/libharu/vtklibharu/include;/home/wwh/VTK-8.1.0/release/ThirdParty/libharu;/home/wwh/VTK-8.1.0/ThirdParty/libharu;/home/wwh/VTK-8.1.0/release/IO/Export;/home/wwh/VTK-8.1.0/IO/Export;/home/wwh/VTK-8.1.0/release/IO/ExportOpenGL2;/home/wwh/VTK-8.1.0/IO/ExportOpenGL2;/home/wwh/VTK-8.1.0/release/IO/Geometry;/home/wwh/VTK-8.1.0/IO/Geometry;/home/wwh/VTK-8.1.0/release/IO/Import;/home/wwh/VTK-8.1.0/IO/Import;/home/wwh/VTK-8.1.0/release/ThirdParty/libxml2/vtklibxml2;/home/wwh/VTK-8.1.0/release/ThirdParty/libxml2;/home/wwh/VTK-8.1.0/ThirdParty/libxml2;/home/wwh/VTK-8.1.0/release/IO/Infovis;/home/wwh/VTK-8.1.0/IO/Infovis;/home/wwh/VTK-8.1.0/release/IO/LSDyna;/home/wwh/VTK-8.1.0/IO/LSDyna;/home/wwh/VTK-8.1.0/release/IO/MINC;/home/wwh/VTK-8.1.0/IO/MINC;/home/wwh/VTK-8.1.0/release/ThirdParty/oggtheora;/home/wwh/VTK-8.1.0/ThirdParty/oggtheora;/home/wwh/VTK-8.1.0/release/IO/Movie;/home/wwh/VTK-8.1.0/IO/Movie;/home/wwh/VTK-8.1.0/release/ThirdParty/netcdfcpp;/home/wwh/VTK-8.1.0/ThirdParty/netcdfcpp;/home/wwh/VTK-8.1.0/release/IO/NetCDF;/home/wwh/VTK-8.1.0/IO/NetCDF;/home/wwh/VTK-8.1.0/release/IO/PLY;/home/wwh/VTK-8.1.0/IO/PLY;/home/wwh/VTK-8.1.0/release/ThirdParty/jsoncpp;/home/wwh/VTK-8.1.0/ThirdParty/jsoncpp;/home/wwh/VTK-8.1.0/release/IO/Parallel;/home/wwh/VTK-8.1.0/IO/Parallel;/home/wwh/VTK-8.1.0/release/IO/ParallelXML;/home/wwh/VTK-8.1.0/IO/ParallelXML;/home/wwh/VTK-8.1.0/release/IO/TecplotTable;/home/wwh/VTK-8.1.0/IO/TecplotTable;/home/wwh/VTK-8.1.0/release/IO/Video;/home/wwh/VTK-8.1.0/IO/Video;/home/wwh/VTK-8.1.0/release/Imaging/Math;/home/wwh/VTK-8.1.0/Imaging/Math;/home/wwh/VTK-8.1.0/release/Imaging/Morphological;/home/wwh/VTK-8.1.0/Imaging/Morphological;/home/wwh/VTK-8.1.0/release/Imaging/Statistics;/home/wwh/VTK-8.1.0/Imaging/Statistics;/home/wwh/VTK-8.1.0/release/Imaging/Stencil;/home/wwh/VTK-8.1.0/Imaging/Stencil;/home/wwh/VTK-8.1.0/release/Interaction/Image;/home/wwh/VTK-8.1.0/Interaction/Image;/home/wwh/VTK-8.1.0/release/Rendering/ContextOpenGL2;/home/wwh/VTK-8.1.0/Rendering/ContextOpenGL2;/home/wwh/VTK-8.1.0/release/Rendering/Image;/home/wwh/VTK-8.1.0/Rendering/Image;/home/wwh/VTK-8.1.0/release/Rendering/LOD;/home/wwh/VTK-8.1.0/Rendering/LOD;/home/wwh/VTK-8.1.0/release/Rendering/Label;/home/wwh/VTK-8.1.0/Rendering/Label;/home/wwh/VTK-8.1.0/release/Rendering/Qt;/home/wwh/VTK-8.1.0/Rendering/Qt;/home/wwh/VTK-8.1.0/release/Rendering/VolumeOpenGL2;/home/wwh/VTK-8.1.0/Rendering/VolumeOpenGL2;/home/wwh/VTK-8.1.0/release/Views/Context2D;/home/wwh/VTK-8.1.0/Views/Context2D;/home/wwh/VTK-8.1.0/release/Views/Infovis;/home/wwh/VTK-8.1.0/Views/Infovis;/home/wwh/VTK-8.1.0/release/Views/Qt;/home/wwh/VTK-8.1.0/Views/Qt][v()]
+//Details about finding PCL_2D
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_2D:INTERNAL=[/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_APPS
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_APPS:INTERNAL=[/usr/local/lib/libpcl_apps.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_COMMON
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_COMMON:INTERNAL=[/usr/local/lib/libpcl_common.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_FEATURES
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_FEATURES:INTERNAL=[/usr/local/lib/libpcl_features.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_FILTERS
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_FILTERS:INTERNAL=[/usr/local/lib/libpcl_filters.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_GEOMETRY
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_GEOMETRY:INTERNAL=[/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_IO
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_IO:INTERNAL=[/usr/local/lib/libpcl_io.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_KDTREE
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_KDTREE:INTERNAL=[/usr/local/lib/libpcl_kdtree.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_KEYPOINTS
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_KEYPOINTS:INTERNAL=[/usr/local/lib/libpcl_keypoints.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_ML
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_ML:INTERNAL=[/usr/local/lib/libpcl_ml.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_OCTREE
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_OCTREE:INTERNAL=[/usr/local/lib/libpcl_octree.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_OUTOFCORE
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_OUTOFCORE:INTERNAL=[/usr/local/lib/libpcl_outofcore.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_PEOPLE
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_PEOPLE:INTERNAL=[/usr/local/lib/libpcl_people.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_RECOGNITION
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_RECOGNITION:INTERNAL=[/usr/local/lib/libpcl_recognition.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_REGISTRATION
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_REGISTRATION:INTERNAL=[/usr/local/lib/libpcl_registration.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_SAMPLE_CONSENSUS
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_SAMPLE_CONSENSUS:INTERNAL=[/usr/local/lib/libpcl_sample_consensus.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_SEARCH
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_SEARCH:INTERNAL=[/usr/local/lib/libpcl_search.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_SEGMENTATION
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_SEGMENTATION:INTERNAL=[/usr/local/lib/libpcl_segmentation.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_STEREO
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_STEREO:INTERNAL=[/usr/local/lib/libpcl_stereo.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_SURFACE
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_SURFACE:INTERNAL=[/usr/local/lib/libpcl_surface.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_TRACKING
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_TRACKING:INTERNAL=[/usr/local/lib/libpcl_tracking.so][/usr/local/include/pcl-1.8][v()]
+//Details about finding PCL_VISUALIZATION
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_VISUALIZATION:INTERNAL=[/usr/local/lib/libpcl_visualization.so][/usr/local/include/pcl-1.8][v()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.12()]
+//Details about finding Qhull
+FIND_PACKAGE_MESSAGE_DETAILS_Qhull:INTERNAL=[/usr/lib/x86_64-linux-gnu/libqhull.so][/usr/include][v()]
+//Details about finding Qt4
+FIND_PACKAGE_MESSAGE_DETAILS_Qt4:INTERNAL=[/usr/bin/qmake-qt4][/usr/lib/x86_64-linux-gnu/qt4/bin/moc][/usr/lib/x86_64-linux-gnu/qt4/bin/rcc][/usr/include/qt4][/usr/lib/x86_64-linux-gnu][/usr/include/qt4/QtCore][/usr/lib/x86_64-linux-gnu/libQtCore.so][/usr/include/qt4/QtGui][/usr/lib/x86_64-linux-gnu/libQtGui.so][/usr/lib/x86_64-linux-gnu/qt4/bin/uic][v4.8.7()]
+//Details about finding TIFF
+FIND_PACKAGE_MESSAGE_DETAILS_TIFF:INTERNAL=[/usr/lib/x86_64-linux-gnu/libtiff.so][/usr/include/x86_64-linux-gnu][v4.0.6()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding USB_10
+FIND_PACKAGE_MESSAGE_DETAILS_USB_10:INTERNAL=[/usr/lib/x86_64-linux-gnu/libusb-1.0.so][/usr/include][v()]
+//Details about finding libusb-1.0
+FIND_PACKAGE_MESSAGE_DETAILS_libusb-1.0:INTERNAL=[/usr/include][v()]
+//ADVANCED property for variable: FLANN_INCLUDE_DIR
+FLANN_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: FLANN_LIBRARY
+FLANN_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: FLANN_LIBRARY_DEBUG
+FLANN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+GMOCK_FROM_SOURCE_FOUND:INTERNAL=TRUE
+GMOCK_FROM_SOURCE_INCLUDE_DIRS:INTERNAL=/usr/include
+GMOCK_FROM_SOURCE_LIBRARIES:INTERNAL=gmock
+GMOCK_FROM_SOURCE_LIBRARY_DIRS:INTERNAL=/home/wwh/qqq/build/gmock
+GMOCK_FROM_SOURCE_MAIN_LIBRARIES:INTERNAL=gmock_main
 GTEST_FROM_SOURCE_FOUND:INTERNAL=TRUE
 GTEST_FROM_SOURCE_INCLUDE_DIRS:INTERNAL=/usr/include
 GTEST_FROM_SOURCE_LIBRARIES:INTERNAL=gtest
@@ -940,6 +2151,270 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LIBSVM_INCLUDE_DIR
+LIBSVM_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LIBSVM_LIBRARY
+LIBSVM_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_DBG
+OpenCV_3RDPARTY_LIB_DIR_DBG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_OPT
+OpenCV_3RDPARTY_LIB_DIR_OPT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_CONFIG_PATH
+OpenCV_CONFIG_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_LIB_DIR_DBG
+OpenCV_LIB_DIR_DBG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_LIB_DIR_OPT
+OpenCV_LIB_DIR_OPT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_APPS_LIBRARY
+PCL_APPS_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_APPS_LIBRARY_DEBUG
+PCL_APPS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_COMMON_LIBRARY
+PCL_COMMON_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_COMMON_LIBRARY_DEBUG
+PCL_COMMON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_FEATURES_LIBRARY
+PCL_FEATURES_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_FEATURES_LIBRARY_DEBUG
+PCL_FEATURES_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_FILTERS_LIBRARY
+PCL_FILTERS_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_FILTERS_LIBRARY_DEBUG
+PCL_FILTERS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_IO_LIBRARY
+PCL_IO_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_IO_LIBRARY_DEBUG
+PCL_IO_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_KDTREE_LIBRARY
+PCL_KDTREE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_KDTREE_LIBRARY_DEBUG
+PCL_KDTREE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_KEYPOINTS_LIBRARY
+PCL_KEYPOINTS_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_KEYPOINTS_LIBRARY_DEBUG
+PCL_KEYPOINTS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_ML_LIBRARY
+PCL_ML_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_ML_LIBRARY_DEBUG
+PCL_ML_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_OCTREE_LIBRARY
+PCL_OCTREE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_OCTREE_LIBRARY_DEBUG
+PCL_OCTREE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_OUTOFCORE_LIBRARY
+PCL_OUTOFCORE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_OUTOFCORE_LIBRARY_DEBUG
+PCL_OUTOFCORE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_PEOPLE_LIBRARY
+PCL_PEOPLE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_PEOPLE_LIBRARY_DEBUG
+PCL_PEOPLE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_RECOGNITION_LIBRARY
+PCL_RECOGNITION_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_RECOGNITION_LIBRARY_DEBUG
+PCL_RECOGNITION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_REGISTRATION_LIBRARY
+PCL_REGISTRATION_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_REGISTRATION_LIBRARY_DEBUG
+PCL_REGISTRATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SAMPLE_CONSENSUS_LIBRARY
+PCL_SAMPLE_CONSENSUS_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SAMPLE_CONSENSUS_LIBRARY_DEBUG
+PCL_SAMPLE_CONSENSUS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SEARCH_LIBRARY
+PCL_SEARCH_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SEARCH_LIBRARY_DEBUG
+PCL_SEARCH_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SEGMENTATION_LIBRARY
+PCL_SEGMENTATION_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SEGMENTATION_LIBRARY_DEBUG
+PCL_SEGMENTATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_STEREO_LIBRARY
+PCL_STEREO_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_STEREO_LIBRARY_DEBUG
+PCL_STEREO_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SURFACE_LIBRARY
+PCL_SURFACE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SURFACE_LIBRARY_DEBUG
+PCL_SURFACE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_TRACKING_LIBRARY
+PCL_TRACKING_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_TRACKING_LIBRARY_DEBUG
+PCL_TRACKING_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_VISUALIZATION_LIBRARY
+PCL_VISUALIZATION_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_VISUALIZATION_LIBRARY_DEBUG
+PCL_VISUALIZATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+PC_EIGEN_CFLAGS:INTERNAL=-I/usr/include/eigen3
+PC_EIGEN_CFLAGS_I:INTERNAL=
+PC_EIGEN_CFLAGS_OTHER:INTERNAL=
+PC_EIGEN_FOUND:INTERNAL=1
+PC_EIGEN_INCLUDEDIR:INTERNAL=
+PC_EIGEN_INCLUDE_DIRS:INTERNAL=/usr/include/eigen3
+PC_EIGEN_LDFLAGS:INTERNAL=
+PC_EIGEN_LDFLAGS_OTHER:INTERNAL=
+PC_EIGEN_LIBDIR:INTERNAL=
+PC_EIGEN_LIBRARIES:INTERNAL=
+PC_EIGEN_LIBRARY_DIRS:INTERNAL=
+PC_EIGEN_LIBS:INTERNAL=
+PC_EIGEN_LIBS_L:INTERNAL=
+PC_EIGEN_LIBS_OTHER:INTERNAL=
+PC_EIGEN_LIBS_PATHS:INTERNAL=
+PC_EIGEN_PREFIX:INTERNAL=/usr
+PC_EIGEN_STATIC_CFLAGS:INTERNAL=-I/usr/include/eigen3
+PC_EIGEN_STATIC_CFLAGS_I:INTERNAL=
+PC_EIGEN_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/eigen3
+PC_EIGEN_STATIC_LDFLAGS:INTERNAL=
+PC_EIGEN_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_LIBDIR:INTERNAL=
+PC_EIGEN_STATIC_LIBRARIES:INTERNAL=
+PC_EIGEN_STATIC_LIBRARY_DIRS:INTERNAL=
+PC_EIGEN_STATIC_LIBS:INTERNAL=
+PC_EIGEN_STATIC_LIBS_L:INTERNAL=
+PC_EIGEN_STATIC_LIBS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_LIBS_PATHS:INTERNAL=
+PC_EIGEN_VERSION:INTERNAL=3.2.92
+PC_EIGEN_eigen3_INCLUDEDIR:INTERNAL=
+PC_EIGEN_eigen3_LIBDIR:INTERNAL=
+PC_EIGEN_eigen3_PREFIX:INTERNAL=
+PC_EIGEN_eigen3_VERSION:INTERNAL=
+PC_FLANN_CFLAGS:INTERNAL=
+PC_FLANN_CFLAGS_I:INTERNAL=
+PC_FLANN_CFLAGS_OTHER:INTERNAL=
+PC_FLANN_FOUND:INTERNAL=1
+PC_FLANN_INCLUDEDIR:INTERNAL=/usr/include
+PC_FLANN_INCLUDE_DIRS:INTERNAL=
+PC_FLANN_LDFLAGS:INTERNAL=-lflann_cpp
+PC_FLANN_LDFLAGS_OTHER:INTERNAL=
+PC_FLANN_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_FLANN_LIBRARIES:INTERNAL=flann_cpp
+PC_FLANN_LIBRARY_DIRS:INTERNAL=
+PC_FLANN_LIBS:INTERNAL=
+PC_FLANN_LIBS_L:INTERNAL=
+PC_FLANN_LIBS_OTHER:INTERNAL=
+PC_FLANN_LIBS_PATHS:INTERNAL=
+PC_FLANN_PREFIX:INTERNAL=/usr
+PC_FLANN_STATIC_CFLAGS:INTERNAL=
+PC_FLANN_STATIC_CFLAGS_I:INTERNAL=
+PC_FLANN_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_FLANN_STATIC_INCLUDE_DIRS:INTERNAL=
+PC_FLANN_STATIC_LDFLAGS:INTERNAL=-lflann_cpp
+PC_FLANN_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_FLANN_STATIC_LIBDIR:INTERNAL=
+PC_FLANN_STATIC_LIBRARIES:INTERNAL=flann_cpp
+PC_FLANN_STATIC_LIBRARY_DIRS:INTERNAL=
+PC_FLANN_STATIC_LIBS:INTERNAL=
+PC_FLANN_STATIC_LIBS_L:INTERNAL=
+PC_FLANN_STATIC_LIBS_OTHER:INTERNAL=
+PC_FLANN_STATIC_LIBS_PATHS:INTERNAL=
+PC_FLANN_VERSION:INTERNAL=1.8.4
+PC_FLANN_flann_INCLUDEDIR:INTERNAL=
+PC_FLANN_flann_LIBDIR:INTERNAL=
+PC_FLANN_flann_PREFIX:INTERNAL=
+PC_FLANN_flann_VERSION:INTERNAL=
+PC_OPENNI2_CFLAGS:INTERNAL=-I/usr/include/openni2
+PC_OPENNI2_CFLAGS_I:INTERNAL=
+PC_OPENNI2_CFLAGS_OTHER:INTERNAL=
+PC_OPENNI2_FOUND:INTERNAL=1
+PC_OPENNI2_INCLUDEDIR:INTERNAL=/usr/include/openni2
+PC_OPENNI2_INCLUDE_DIRS:INTERNAL=/usr/include/openni2
+PC_OPENNI2_LDFLAGS:INTERNAL=-L/usr/lib/OpenNI2/Drivers;-lOpenNI2;-lDummyDevice;-lOniFile;-lPS1080
+PC_OPENNI2_LDFLAGS_OTHER:INTERNAL=
+PC_OPENNI2_LIBDIR:INTERNAL=/usr/lib
+PC_OPENNI2_LIBRARIES:INTERNAL=OpenNI2;DummyDevice;OniFile;PS1080
+PC_OPENNI2_LIBRARY_DIRS:INTERNAL=/usr/lib/OpenNI2/Drivers
+PC_OPENNI2_LIBS:INTERNAL=
+PC_OPENNI2_LIBS_L:INTERNAL=
+PC_OPENNI2_LIBS_OTHER:INTERNAL=
+PC_OPENNI2_LIBS_PATHS:INTERNAL=
+PC_OPENNI2_PREFIX:INTERNAL=/usr
+PC_OPENNI2_STATIC_CFLAGS:INTERNAL=-I/usr/include/openni2
+PC_OPENNI2_STATIC_CFLAGS_I:INTERNAL=
+PC_OPENNI2_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_OPENNI2_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/openni2
+PC_OPENNI2_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/OpenNI2/Drivers;-lOpenNI2;-lDummyDevice;-lOniFile;-lPS1080
+PC_OPENNI2_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_OPENNI2_STATIC_LIBDIR:INTERNAL=
+PC_OPENNI2_STATIC_LIBRARIES:INTERNAL=OpenNI2;DummyDevice;OniFile;PS1080
+PC_OPENNI2_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/OpenNI2/Drivers
+PC_OPENNI2_STATIC_LIBS:INTERNAL=
+PC_OPENNI2_STATIC_LIBS_L:INTERNAL=
+PC_OPENNI2_STATIC_LIBS_OTHER:INTERNAL=
+PC_OPENNI2_STATIC_LIBS_PATHS:INTERNAL=
+PC_OPENNI2_VERSION:INTERNAL=2.2.0.3
+PC_OPENNI2_libopenni2_INCLUDEDIR:INTERNAL=
+PC_OPENNI2_libopenni2_LIBDIR:INTERNAL=
+PC_OPENNI2_libopenni2_PREFIX:INTERNAL=
+PC_OPENNI2_libopenni2_VERSION:INTERNAL=
+PC_OPENNI_CFLAGS:INTERNAL=-I/usr/include/ni
+PC_OPENNI_CFLAGS_I:INTERNAL=
+PC_OPENNI_CFLAGS_OTHER:INTERNAL=
+PC_OPENNI_FOUND:INTERNAL=1
+PC_OPENNI_INCLUDEDIR:INTERNAL=/usr/include/ni
+PC_OPENNI_INCLUDE_DIRS:INTERNAL=/usr/include/ni
+PC_OPENNI_LDFLAGS:INTERNAL=-lOpenNI
+PC_OPENNI_LDFLAGS_OTHER:INTERNAL=
+PC_OPENNI_LIBDIR:INTERNAL=/usr/lib
+PC_OPENNI_LIBRARIES:INTERNAL=OpenNI
+PC_OPENNI_LIBRARY_DIRS:INTERNAL=
+PC_OPENNI_LIBS:INTERNAL=
+PC_OPENNI_LIBS_L:INTERNAL=
+PC_OPENNI_LIBS_OTHER:INTERNAL=
+PC_OPENNI_LIBS_PATHS:INTERNAL=
+PC_OPENNI_PREFIX:INTERNAL=/usr
+PC_OPENNI_STATIC_CFLAGS:INTERNAL=-I/usr/include/ni
+PC_OPENNI_STATIC_CFLAGS_I:INTERNAL=
+PC_OPENNI_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_OPENNI_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/ni
+PC_OPENNI_STATIC_LDFLAGS:INTERNAL=-lOpenNI
+PC_OPENNI_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_OPENNI_STATIC_LIBDIR:INTERNAL=
+PC_OPENNI_STATIC_LIBRARIES:INTERNAL=OpenNI
+PC_OPENNI_STATIC_LIBRARY_DIRS:INTERNAL=
+PC_OPENNI_STATIC_LIBS:INTERNAL=
+PC_OPENNI_STATIC_LIBS_L:INTERNAL=
+PC_OPENNI_STATIC_LIBS_OTHER:INTERNAL=
+PC_OPENNI_STATIC_LIBS_PATHS:INTERNAL=
+PC_OPENNI_VERSION:INTERNAL=1.5.4.0
+PC_OPENNI_libopenni_INCLUDEDIR:INTERNAL=
+PC_OPENNI_libopenni_LIBDIR:INTERNAL=
+PC_OPENNI_libopenni_PREFIX:INTERNAL=
+PC_OPENNI_libopenni_VERSION:INTERNAL=
+PC_USB_10_CFLAGS:INTERNAL=-I/usr/include/libusb-1.0
+PC_USB_10_CFLAGS_I:INTERNAL=
+PC_USB_10_CFLAGS_OTHER:INTERNAL=
+PC_USB_10_FOUND:INTERNAL=1
+PC_USB_10_INCLUDEDIR:INTERNAL=/usr/include
+PC_USB_10_INCLUDE_DIRS:INTERNAL=/usr/include/libusb-1.0
+PC_USB_10_LDFLAGS:INTERNAL=-lusb-1.0
+PC_USB_10_LDFLAGS_OTHER:INTERNAL=
+PC_USB_10_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_USB_10_LIBRARIES:INTERNAL=usb-1.0
+PC_USB_10_LIBRARY_DIRS:INTERNAL=
+PC_USB_10_LIBS:INTERNAL=
+PC_USB_10_LIBS_L:INTERNAL=
+PC_USB_10_LIBS_OTHER:INTERNAL=
+PC_USB_10_LIBS_PATHS:INTERNAL=
+PC_USB_10_PREFIX:INTERNAL=/usr
+PC_USB_10_STATIC_CFLAGS:INTERNAL=-I/usr/include/libusb-1.0
+PC_USB_10_STATIC_CFLAGS_I:INTERNAL=
+PC_USB_10_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_USB_10_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/libusb-1.0
+PC_USB_10_STATIC_LDFLAGS:INTERNAL=-lusb-1.0;-ludev;-pthread
+PC_USB_10_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+PC_USB_10_STATIC_LIBDIR:INTERNAL=
+PC_USB_10_STATIC_LIBRARIES:INTERNAL=usb-1.0;udev
+PC_USB_10_STATIC_LIBRARY_DIRS:INTERNAL=
+PC_USB_10_STATIC_LIBS:INTERNAL=
+PC_USB_10_STATIC_LIBS_L:INTERNAL=
+PC_USB_10_STATIC_LIBS_OTHER:INTERNAL=
+PC_USB_10_STATIC_LIBS_PATHS:INTERNAL=
+PC_USB_10_VERSION:INTERNAL=1.0.20
+PC_USB_10_libusb-1.0_INCLUDEDIR:INTERNAL=
+PC_USB_10_libusb-1.0_LIBDIR:INTERNAL=
+PC_USB_10_libusb-1.0_PREFIX:INTERNAL=
+PC_USB_10_libusb-1.0_VERSION:INTERNAL=
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
@@ -948,6 +2423,463 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
+//QHull header
+QHULL_HEADER:INTERNAL=/usr/include/libqhull/libqhull.h
+//ADVANCED property for variable: QHULL_INCLUDE_DIR
+QHULL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QHULL_LIBRARY
+QHULL_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QHULL_LIBRARY_DEBUG
+QHULL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_ARTHURPLUGIN_PLUGIN_DEBUG
+QT_ARTHURPLUGIN_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_ARTHURPLUGIN_PLUGIN_RELEASE
+QT_ARTHURPLUGIN_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+QT_BINARY_DIR:INTERNAL=/usr/lib/x86_64-linux-gnu/qt4/bin
+//ADVANCED property for variable: QT_CONTAINEREXTENSION_PLUGIN_DEBUG
+QT_CONTAINEREXTENSION_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_CONTAINEREXTENSION_PLUGIN_RELEASE
+QT_CONTAINEREXTENSION_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_CUSTOMWIDGETPLUGIN_PLUGIN_DEBUG
+QT_CUSTOMWIDGETPLUGIN_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_CUSTOMWIDGETPLUGIN_PLUGIN_RELEASE
+QT_CUSTOMWIDGETPLUGIN_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_DBUSCPP2XML_EXECUTABLE
+QT_DBUSCPP2XML_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_DBUSXML2CPP_EXECUTABLE
+QT_DBUSXML2CPP_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_DESIGNER_EXECUTABLE
+QT_DESIGNER_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_DOC_DIR
+QT_DOC_DIR-ADVANCED:INTERNAL=1
+QT_HEADERS_DIR:INTERNAL=/usr/include/qt4
+//ADVANCED property for variable: QT_IMPORTS_DIR
+QT_IMPORTS_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_LIBRARY_DIR
+QT_LIBRARY_DIR-ADVANCED:INTERNAL=1
+//Qt library dir
+QT_LIBRARY_DIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+//ADVANCED property for variable: QT_LINGUIST_EXECUTABLE
+QT_LINGUIST_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_LRELEASE_EXECUTABLE
+QT_LRELEASE_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_LUPDATE_EXECUTABLE
+QT_LUPDATE_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_MKSPECS_DIR
+QT_MKSPECS_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_MOC_EXECUTABLE
+QT_MOC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_PHONONWIDGETS_PLUGIN_DEBUG
+QT_PHONONWIDGETS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_PHONONWIDGETS_PLUGIN_RELEASE
+QT_PHONONWIDGETS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_PHONON_INCLUDE_DIR
+QT_PHONON_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_PHONON_LIBRARY
+QT_PHONON_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_PHONON_LIBRARY_DEBUG
+QT_PHONON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_PHONON_LIBRARY_RELEASE
+QT_PHONON_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_PLUGINS_DIR
+QT_PLUGINS_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QCNCODECS_PLUGIN_DEBUG
+QT_QCNCODECS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QCNCODECS_PLUGIN_RELEASE
+QT_QCNCODECS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QCOLLECTIONGENERATOR_EXECUTABLE
+QT_QCOLLECTIONGENERATOR_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QCOREWLANBEARER_PLUGIN_DEBUG
+QT_QCOREWLANBEARER_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QCOREWLANBEARER_PLUGIN_RELEASE
+QT_QCOREWLANBEARER_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QDECLARATIVEVIEW_PLUGIN_DEBUG
+QT_QDECLARATIVEVIEW_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QDECLARATIVEVIEW_PLUGIN_RELEASE
+QT_QDECLARATIVEVIEW_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QDECORATIONDEFAULT_PLUGIN_DEBUG
+QT_QDECORATIONDEFAULT_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QDECORATIONDEFAULT_PLUGIN_RELEASE
+QT_QDECORATIONDEFAULT_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QDECORATIONWINDOWS_PLUGIN_DEBUG
+QT_QDECORATIONWINDOWS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QDECORATIONWINDOWS_PLUGIN_RELEASE
+QT_QDECORATIONWINDOWS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QGENERICBEARER_PLUGIN_DEBUG
+QT_QGENERICBEARER_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QGENERICBEARER_PLUGIN_RELEASE
+QT_QGENERICBEARER_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QGIF_PLUGIN_DEBUG
+QT_QGIF_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QGIF_PLUGIN_RELEASE
+QT_QGIF_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QGLGRAPHICSSYSTEM_PLUGIN_DEBUG
+QT_QGLGRAPHICSSYSTEM_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QGLGRAPHICSSYSTEM_PLUGIN_RELEASE
+QT_QGLGRAPHICSSYSTEM_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QICO_PLUGIN_DEBUG
+QT_QICO_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QICO_PLUGIN_RELEASE
+QT_QICO_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QIMSW_MULTI_PLUGIN_DEBUG
+QT_QIMSW_MULTI_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QIMSW_MULTI_PLUGIN_RELEASE
+QT_QIMSW_MULTI_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QJPCODECS_PLUGIN_DEBUG
+QT_QJPCODECS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QJPCODECS_PLUGIN_RELEASE
+QT_QJPCODECS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QJPEG_PLUGIN_DEBUG
+QT_QJPEG_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QJPEG_PLUGIN_RELEASE
+QT_QJPEG_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QKRCODECS_PLUGIN_DEBUG
+QT_QKRCODECS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QKRCODECS_PLUGIN_RELEASE
+QT_QKRCODECS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+QT_QMAKE_EXECUTABLE_LAST:INTERNAL=/usr/bin/qmake-qt4
+//ADVANCED property for variable: QT_QMNG_PLUGIN_DEBUG
+QT_QMNG_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QMNG_PLUGIN_RELEASE
+QT_QMNG_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QNATIVEWIFIBEARER_PLUGIN_DEBUG
+QT_QNATIVEWIFIBEARER_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QNATIVEWIFIBEARER_PLUGIN_RELEASE
+QT_QNATIVEWIFIBEARER_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLDB2_PLUGIN_DEBUG
+QT_QSQLDB2_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLDB2_PLUGIN_RELEASE
+QT_QSQLDB2_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLIBASE_PLUGIN_DEBUG
+QT_QSQLIBASE_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLIBASE_PLUGIN_RELEASE
+QT_QSQLIBASE_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLITE2_PLUGIN_DEBUG
+QT_QSQLITE2_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLITE2_PLUGIN_RELEASE
+QT_QSQLITE2_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLITE_PLUGIN_DEBUG
+QT_QSQLITE_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLITE_PLUGIN_RELEASE
+QT_QSQLITE_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLMYSQL_PLUGIN_DEBUG
+QT_QSQLMYSQL_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLMYSQL_PLUGIN_RELEASE
+QT_QSQLMYSQL_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLOCI_PLUGIN_DEBUG
+QT_QSQLOCI_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLOCI_PLUGIN_RELEASE
+QT_QSQLOCI_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLODBC_PLUGIN_DEBUG
+QT_QSQLODBC_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLODBC_PLUGIN_RELEASE
+QT_QSQLODBC_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLPSQL_PLUGIN_DEBUG
+QT_QSQLPSQL_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLPSQL_PLUGIN_RELEASE
+QT_QSQLPSQL_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLTDS_PLUGIN_DEBUG
+QT_QSQLTDS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSQLTDS_PLUGIN_RELEASE
+QT_QSQLTDS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSVGICON_PLUGIN_DEBUG
+QT_QSVGICON_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSVGICON_PLUGIN_RELEASE
+QT_QSVGICON_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSVG_PLUGIN_DEBUG
+QT_QSVG_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QSVG_PLUGIN_RELEASE
+QT_QSVG_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QT3SUPPORTWIDGETS_PLUGIN_DEBUG
+QT_QT3SUPPORTWIDGETS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QT3SUPPORTWIDGETS_PLUGIN_RELEASE
+QT_QT3SUPPORTWIDGETS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QT3SUPPORT_INCLUDE_DIR
+QT_QT3SUPPORT_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QT3SUPPORT_LIBRARY
+QT_QT3SUPPORT_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QT3SUPPORT_LIBRARY_DEBUG
+QT_QT3SUPPORT_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QT3SUPPORT_LIBRARY_RELEASE
+QT_QT3SUPPORT_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTACCESSIBLECOMPATWIDGETS_PLUGIN_DEBUG
+QT_QTACCESSIBLECOMPATWIDGETS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTACCESSIBLECOMPATWIDGETS_PLUGIN_RELEASE
+QT_QTACCESSIBLECOMPATWIDGETS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTACCESSIBLEWIDGETS_PLUGIN_DEBUG
+QT_QTACCESSIBLEWIDGETS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTACCESSIBLEWIDGETS_PLUGIN_RELEASE
+QT_QTACCESSIBLEWIDGETS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTASSISTANTCLIENT_INCLUDE_DIR
+QT_QTASSISTANTCLIENT_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTASSISTANTCLIENT_LIBRARY
+QT_QTASSISTANTCLIENT_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTASSISTANTCLIENT_LIBRARY_DEBUG
+QT_QTASSISTANTCLIENT_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTASSISTANTCLIENT_LIBRARY_RELEASE
+QT_QTASSISTANTCLIENT_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTASSISTANT_INCLUDE_DIR
+QT_QTASSISTANT_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTASSISTANT_LIBRARY
+QT_QTASSISTANT_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTASSISTANT_LIBRARY_DEBUG
+QT_QTASSISTANT_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTASSISTANT_LIBRARY_RELEASE
+QT_QTASSISTANT_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTCLUCENE_LIBRARY
+QT_QTCLUCENE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTCLUCENE_LIBRARY_DEBUG
+QT_QTCLUCENE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTCLUCENE_LIBRARY_RELEASE
+QT_QTCLUCENE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTCORE_INCLUDE_DIR
+QT_QTCORE_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTCORE_LIBRARY
+QT_QTCORE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTCORE_LIBRARY_DEBUG
+QT_QTCORE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTCORE_LIBRARY_RELEASE
+QT_QTCORE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDBUS_INCLUDE_DIR
+QT_QTDBUS_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDBUS_LIBRARY
+QT_QTDBUS_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDBUS_LIBRARY_DEBUG
+QT_QTDBUS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDBUS_LIBRARY_RELEASE
+QT_QTDBUS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDECLARATIVE_INCLUDE_DIR
+QT_QTDECLARATIVE_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDECLARATIVE_LIBRARY
+QT_QTDECLARATIVE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDECLARATIVE_LIBRARY_DEBUG
+QT_QTDECLARATIVE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDECLARATIVE_LIBRARY_RELEASE
+QT_QTDECLARATIVE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDESIGNERCOMPONENTS_INCLUDE_DIR
+QT_QTDESIGNERCOMPONENTS_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDESIGNERCOMPONENTS_LIBRARY
+QT_QTDESIGNERCOMPONENTS_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDESIGNERCOMPONENTS_LIBRARY_DEBUG
+QT_QTDESIGNERCOMPONENTS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDESIGNERCOMPONENTS_LIBRARY_RELEASE
+QT_QTDESIGNERCOMPONENTS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDESIGNER_INCLUDE_DIR
+QT_QTDESIGNER_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDESIGNER_LIBRARY
+QT_QTDESIGNER_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDESIGNER_LIBRARY_DEBUG
+QT_QTDESIGNER_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTDESIGNER_LIBRARY_RELEASE
+QT_QTDESIGNER_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTGA_PLUGIN_DEBUG
+QT_QTGA_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTGA_PLUGIN_RELEASE
+QT_QTGA_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTGUI_INCLUDE_DIR
+QT_QTGUI_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTGUI_LIBRARY
+QT_QTGUI_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTGUI_LIBRARY_DEBUG
+QT_QTGUI_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTGUI_LIBRARY_RELEASE
+QT_QTGUI_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTHELP_INCLUDE_DIR
+QT_QTHELP_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTHELP_LIBRARY
+QT_QTHELP_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTHELP_LIBRARY_DEBUG
+QT_QTHELP_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTHELP_LIBRARY_RELEASE
+QT_QTHELP_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTIFF_PLUGIN_DEBUG
+QT_QTIFF_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTIFF_PLUGIN_RELEASE
+QT_QTIFF_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTMOTIF_INCLUDE_DIR
+QT_QTMOTIF_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTMOTIF_LIBRARY
+QT_QTMOTIF_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTMOTIF_LIBRARY_DEBUG
+QT_QTMOTIF_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTMOTIF_LIBRARY_RELEASE
+QT_QTMOTIF_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTMULTIMEDIA_INCLUDE_DIR
+QT_QTMULTIMEDIA_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTMULTIMEDIA_LIBRARY
+QT_QTMULTIMEDIA_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTMULTIMEDIA_LIBRARY_DEBUG
+QT_QTMULTIMEDIA_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTMULTIMEDIA_LIBRARY_RELEASE
+QT_QTMULTIMEDIA_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTNETWORK_INCLUDE_DIR
+QT_QTNETWORK_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTNETWORK_LIBRARY
+QT_QTNETWORK_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTNETWORK_LIBRARY_DEBUG
+QT_QTNETWORK_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTNETWORK_LIBRARY_RELEASE
+QT_QTNETWORK_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTNSPLUGIN_INCLUDE_DIR
+QT_QTNSPLUGIN_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTNSPLUGIN_LIBRARY
+QT_QTNSPLUGIN_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTNSPLUGIN_LIBRARY_DEBUG
+QT_QTNSPLUGIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTNSPLUGIN_LIBRARY_RELEASE
+QT_QTNSPLUGIN_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTOPENGL_INCLUDE_DIR
+QT_QTOPENGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTOPENGL_LIBRARY
+QT_QTOPENGL_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTOPENGL_LIBRARY_DEBUG
+QT_QTOPENGL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTOPENGL_LIBRARY_RELEASE
+QT_QTOPENGL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTRACEGRAPHICSSYSTEM_PLUGIN_DEBUG
+QT_QTRACEGRAPHICSSYSTEM_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTRACEGRAPHICSSYSTEM_PLUGIN_RELEASE
+QT_QTRACEGRAPHICSSYSTEM_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSCRIPTDBUS_PLUGIN_DEBUG
+QT_QTSCRIPTDBUS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSCRIPTDBUS_PLUGIN_RELEASE
+QT_QTSCRIPTDBUS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSCRIPTTOOLS_INCLUDE_DIR
+QT_QTSCRIPTTOOLS_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSCRIPTTOOLS_LIBRARY
+QT_QTSCRIPTTOOLS_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSCRIPTTOOLS_LIBRARY_DEBUG
+QT_QTSCRIPTTOOLS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSCRIPTTOOLS_LIBRARY_RELEASE
+QT_QTSCRIPTTOOLS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSCRIPT_INCLUDE_DIR
+QT_QTSCRIPT_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSCRIPT_LIBRARY
+QT_QTSCRIPT_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSCRIPT_LIBRARY_DEBUG
+QT_QTSCRIPT_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSCRIPT_LIBRARY_RELEASE
+QT_QTSCRIPT_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSQL_INCLUDE_DIR
+QT_QTSQL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSQL_LIBRARY
+QT_QTSQL_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSQL_LIBRARY_DEBUG
+QT_QTSQL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSQL_LIBRARY_RELEASE
+QT_QTSQL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSVG_INCLUDE_DIR
+QT_QTSVG_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSVG_LIBRARY
+QT_QTSVG_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSVG_LIBRARY_DEBUG
+QT_QTSVG_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTSVG_LIBRARY_RELEASE
+QT_QTSVG_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTTEST_INCLUDE_DIR
+QT_QTTEST_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTTEST_LIBRARY
+QT_QTTEST_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTTEST_LIBRARY_DEBUG
+QT_QTTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTTEST_LIBRARY_RELEASE
+QT_QTTEST_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTUITOOLS_INCLUDE_DIR
+QT_QTUITOOLS_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTUITOOLS_LIBRARY
+QT_QTUITOOLS_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTUITOOLS_LIBRARY_DEBUG
+QT_QTUITOOLS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTUITOOLS_LIBRARY_RELEASE
+QT_QTUITOOLS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTWCODECS_PLUGIN_DEBUG
+QT_QTWCODECS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTWCODECS_PLUGIN_RELEASE
+QT_QTWCODECS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTWEBKIT_INCLUDE_DIR
+QT_QTWEBKIT_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTWEBKIT_LIBRARY
+QT_QTWEBKIT_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTWEBKIT_LIBRARY_DEBUG
+QT_QTWEBKIT_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTWEBKIT_LIBRARY_RELEASE
+QT_QTWEBKIT_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTXMLPATTERNS_INCLUDE_DIR
+QT_QTXMLPATTERNS_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTXMLPATTERNS_LIBRARY
+QT_QTXMLPATTERNS_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTXMLPATTERNS_LIBRARY_DEBUG
+QT_QTXMLPATTERNS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTXMLPATTERNS_LIBRARY_RELEASE
+QT_QTXMLPATTERNS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTXML_INCLUDE_DIR
+QT_QTXML_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTXML_LIBRARY
+QT_QTXML_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTXML_LIBRARY_DEBUG
+QT_QTXML_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QTXML_LIBRARY_RELEASE
+QT_QTXML_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QWEBVIEW_PLUGIN_DEBUG
+QT_QWEBVIEW_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QWEBVIEW_PLUGIN_RELEASE
+QT_QWEBVIEW_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QWSTSLIBMOUSEHANDLER_PLUGIN_DEBUG
+QT_QWSTSLIBMOUSEHANDLER_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QWSTSLIBMOUSEHANDLER_PLUGIN_RELEASE
+QT_QWSTSLIBMOUSEHANDLER_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_RCC_EXECUTABLE
+QT_RCC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_TASKMENUEXTENSION_PLUGIN_DEBUG
+QT_TASKMENUEXTENSION_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_TASKMENUEXTENSION_PLUGIN_RELEASE
+QT_TASKMENUEXTENSION_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_TRANSLATIONS_DIR
+QT_TRANSLATIONS_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_UIC3_EXECUTABLE
+QT_UIC3_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_UIC_EXECUTABLE
+QT_UIC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_WORLDTIMECLOCKPLUGIN_PLUGIN_DEBUG
+QT_WORLDTIMECLOCKPLUGIN_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_WORLDTIMECLOCKPLUGIN_PLUGIN_RELEASE
+QT_WORLDTIMECLOCKPLUGIN_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
+//Have symbol Q_WS_MAC
+Q_WS_MAC:INTERNAL=
+//Have symbol Q_WS_QWS
+Q_WS_QWS:INTERNAL=
+//Have symbol Q_WS_WIN
+Q_WS_WIN:INTERNAL=
+//Have symbol Q_WS_X11
+Q_WS_X11:INTERNAL=1
+//ADVANCED property for variable: TIFF_INCLUDE_DIR
+TIFF_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: TIFF_LIBRARY_DEBUG
+TIFF_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: TIFF_LIBRARY_RELEASE
+TIFF_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//Last used BOOST_INCLUDEDIR value.
+_BOOST_INCLUDEDIR_LAST:INTERNAL=/usr/include
+//Last used Boost_ADDITIONAL_VERSIONS value.
+_Boost_ADDITIONAL_VERSIONS_LAST:INTERNAL=1.58.0;1.58;1.66.0;1.66;1.65.1;1.65.0;1.65;1.64.0;1.64;1.63.0;1.63;1.62.0;1.62;1.61.0;1.61;1.60.0;1.60;1.59.0;1.59;1.58.0;1.58;1.57.0;1.57;1.56.0;1.56;1.55.0;1.55;1.54.0;1.54;1.53.0;1.53;1.52.0;1.52;1.51.0;1.51;1.50.0;1.50;1.49.0;1.49;1.48.0;1.48;1.47.0;1.47
+//Components requested for this build tree.
+_Boost_COMPONENTS_SEARCHED:INTERNAL=atomic;chrono;date_time;filesystem;iostreams;regex;serialization;system;thread
+//Last used Boost_INCLUDE_DIR value.
+_Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
+//Last used Boost_LIBRARY_DIR_DEBUG value.
+_Boost_LIBRARY_DIR_DEBUG_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
+//Last used Boost_LIBRARY_DIR_RELEASE value.
+_Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
+//Last used Boost_NAMESPACE value.
+_Boost_NAMESPACE_LAST:INTERNAL=boost
+//Last used Boost_USE_MULTITHREADED value.
+_Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+__pkg_config_checked_CUDAHOG:INTERNAL=1
+__pkg_config_checked_PC_EIGEN:INTERNAL=1
+__pkg_config_checked_PC_FLANN:INTERNAL=1
+__pkg_config_checked_PC_OPENNI:INTERNAL=1
+__pkg_config_checked_PC_OPENNI2:INTERNAL=1
+__pkg_config_checked_PC_USB_10:INTERNAL=1
 __pkg_config_checked_avcodec:INTERNAL=1
 __pkg_config_checked_swscale:INTERNAL=1
 avcodec_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu

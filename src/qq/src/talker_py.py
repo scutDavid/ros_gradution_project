@@ -1,7 +1,9 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2
 import rospy
 from std_msgs.msg import String
 import numpy as np
+import yaml
+import cv2
 a=np.random.randint(0,20,size=(10,2))
 print(a)
 

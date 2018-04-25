@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/install
+
+Name: rwth_ground_hog
+Description: Description of rwth_ground_hog
+Version: 1.0.8
+Cflags: -I/home/wwh/qqq/install/include
+Libs: -L/home/wwh/qqq/install/lib 
+Requires: 

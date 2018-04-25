@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/devel
+
+Name: spencer_detected_person_association
+Description: Description of spencer_detected_person_association
+Version: 1.0.8
+Cflags: -I/home/wwh/qqq/devel/include
+Libs: -L/home/wwh/qqq/devel/lib 
+Requires: roscpp message_filters spencer_tracking_msgs std_msgs nodelet eigen_conversions tf_conversions

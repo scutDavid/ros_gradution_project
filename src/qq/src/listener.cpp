@@ -1,7 +1,7 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 #include <sensor_msgs/LaserEcho.h>
-#include "/home/wwh/qqq/devel/include/qq/Num.h"
+//#include "/home/wwh/qqq/devel/include/qq/Num.h"
 #include <string>
 #include <iostream>
 using namespace std;

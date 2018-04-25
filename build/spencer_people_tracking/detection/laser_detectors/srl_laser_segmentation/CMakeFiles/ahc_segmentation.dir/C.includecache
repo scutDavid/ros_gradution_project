@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wwh/qqq/src/spencer_people_tracking/detection/laser_detectors/srl_laser_segmentation/include/srl_laser_segmentation/efficient_ahc/fib.h
+
+/home/wwh/qqq/src/spencer_people_tracking/detection/laser_detectors/srl_laser_segmentation/include/srl_laser_segmentation/efficient_ahc/fibpriv.h
+
+/home/wwh/qqq/src/spencer_people_tracking/detection/laser_detectors/srl_laser_segmentation/src/srl_laser_segmentation/efficient_ahc/fib.c
+srl_laser_segmentation/efficient_ahc/fib.h
+-
+srl_laser_segmentation/efficient_ahc/fibpriv.h
+-
+limits.h
+-
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+

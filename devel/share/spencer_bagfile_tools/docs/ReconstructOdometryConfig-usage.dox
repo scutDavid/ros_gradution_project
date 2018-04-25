@@ -1,0 +1,12 @@
+\subsubsection usage Usage
+\verbatim
+<node name="spencer_bagfile_tools" pkg="spencer_bagfile_tools" type="spencer_bagfile_tools">
+  <param name="extra_calib_overall_multiplier" type="double" value="1.0" />
+  <param name="extra_calib_left_multiplier" type="double" value="1.0" />
+  <param name="recalculate_path" type="bool" value="True" />
+  <param name="line_width" type="double" value="1.0" />
+  <param name="arrow_length" type="double" value="1.0" />
+  <param name="show_waypoints" type="bool" value="True" />
+</node>
+\endverbatim
+

@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/install
+
+Name: pcl_people_detector
+Description: Description of pcl_people_detector
+Version: 1.0.8
+Cflags: 
+Libs: -L/home/wwh/qqq/install/lib 
+Requires: 

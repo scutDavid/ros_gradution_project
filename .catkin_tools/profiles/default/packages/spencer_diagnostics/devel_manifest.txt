@@ -1,0 +1,7 @@
+spencer_people_tracking/utils/spencer_diagnostics
+/home/wwh/qqq/devel/.private/spencer_diagnostics/share/spencer_diagnostics/cmake/spencer_diagnosticsConfig.cmake /home/wwh/qqq/devel/share/spencer_diagnostics/cmake/spencer_diagnosticsConfig.cmake
+/home/wwh/qqq/devel/.private/spencer_diagnostics/share/spencer_diagnostics/cmake/spencer_diagnosticsConfig-version.cmake /home/wwh/qqq/devel/share/spencer_diagnostics/cmake/spencer_diagnosticsConfig-version.cmake
+/home/wwh/qqq/devel/.private/spencer_diagnostics/lib/libspencer_diagnostics.so /home/wwh/qqq/devel/lib/libspencer_diagnostics.so
+/home/wwh/qqq/devel/.private/spencer_diagnostics/lib/pkgconfig/spencer_diagnostics.pc /home/wwh/qqq/devel/lib/pkgconfig/spencer_diagnostics.pc
+/home/wwh/qqq/devel/.private/spencer_diagnostics/lib/python2.7/dist-packages/spencer_diagnostics/__init__.py /home/wwh/qqq/devel/lib/python2.7/dist-packages/spencer_diagnostics/__init__.py
+/home/wwh/qqq/devel/.private/spencer_diagnostics/lib/spencer_diagnostics/tf_lookup_monitor /home/wwh/qqq/devel/lib/spencer_diagnostics/tf_lookup_monitor

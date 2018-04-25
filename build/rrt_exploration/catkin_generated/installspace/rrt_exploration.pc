@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/install
+
+Name: rrt_exploration
+Description: Description of rrt_exploration
+Version: 1.0.0
+Cflags: -I/home/wwh/qqq/install/include
+Libs: -L/home/wwh/qqq/install/lib 
+Requires: message_runtime

@@ -1,8 +1,0 @@
-prefix=/home/wwh/qqq/devel
-
-Name: chapter5_tutorials
-Description: Description of chapter5_tutorials
-Version: 0.1.0
-Cflags: 
-Libs: -L/home/wwh/qqq/devel/lib 
-Requires: 

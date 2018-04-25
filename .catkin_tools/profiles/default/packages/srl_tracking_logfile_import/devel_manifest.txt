@@ -1,0 +1,5 @@
+spencer_people_tracking/tracking/people/srl_tracking_logfile_import
+/home/wwh/qqq/devel/.private/srl_tracking_logfile_import/share/srl_tracking_logfile_import/cmake/srl_tracking_logfile_importConfig.cmake /home/wwh/qqq/devel/share/srl_tracking_logfile_import/cmake/srl_tracking_logfile_importConfig.cmake
+/home/wwh/qqq/devel/.private/srl_tracking_logfile_import/share/srl_tracking_logfile_import/cmake/srl_tracking_logfile_importConfig-version.cmake /home/wwh/qqq/devel/share/srl_tracking_logfile_import/cmake/srl_tracking_logfile_importConfig-version.cmake
+/home/wwh/qqq/devel/.private/srl_tracking_logfile_import/lib/pkgconfig/srl_tracking_logfile_import.pc /home/wwh/qqq/devel/lib/pkgconfig/srl_tracking_logfile_import.pc
+/home/wwh/qqq/devel/.private/srl_tracking_logfile_import/lib/python2.7/dist-packages/srl_tracking_logfile_import/__init__.py /home/wwh/qqq/devel/lib/python2.7/dist-packages/srl_tracking_logfile_import/__init__.py

@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/devel
+
+Name: spencer_detected_person_conversion
+Description: Description of spencer_detected_person_conversion
+Version: 1.0.8
+Cflags: 
+Libs: -L/home/wwh/qqq/devel/lib 
+Requires: rospy spencer_tracking_msgs

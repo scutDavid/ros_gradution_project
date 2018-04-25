@@ -1,0 +1,4 @@
+spencer_people_tracking/detection/spencer_detected_person_conversion
+/home/wwh/qqq/devel/.private/spencer_detected_person_conversion/share/spencer_detected_person_conversion/cmake/spencer_detected_person_conversionConfig-version.cmake /home/wwh/qqq/devel/share/spencer_detected_person_conversion/cmake/spencer_detected_person_conversionConfig-version.cmake
+/home/wwh/qqq/devel/.private/spencer_detected_person_conversion/share/spencer_detected_person_conversion/cmake/spencer_detected_person_conversionConfig.cmake /home/wwh/qqq/devel/share/spencer_detected_person_conversion/cmake/spencer_detected_person_conversionConfig.cmake
+/home/wwh/qqq/devel/.private/spencer_detected_person_conversion/lib/pkgconfig/spencer_detected_person_conversion.pc /home/wwh/qqq/devel/lib/pkgconfig/spencer_detected_person_conversion.pc

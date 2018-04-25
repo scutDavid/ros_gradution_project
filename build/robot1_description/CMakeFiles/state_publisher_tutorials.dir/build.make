@@ -131,8 +131,8 @@ state_publisher_tutorials_EXTERNAL_OBJECTS =
 /home/wwh/qqq/devel/lib/robot1_description/state_publisher_tutorials: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/wwh/qqq/devel/lib/robot1_description/state_publisher_tutorials: /usr/lib/x86_64-linux-gnu/libboost_regex.so
 /home/wwh/qqq/devel/lib/robot1_description/state_publisher_tutorials: /opt/ros/kinetic/lib/libroscpp_serialization.so
-/home/wwh/qqq/devel/lib/robot1_description/state_publisher_tutorials: /opt/ros/kinetic/lib/librostime.so
 /home/wwh/qqq/devel/lib/robot1_description/state_publisher_tutorials: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/wwh/qqq/devel/lib/robot1_description/state_publisher_tutorials: /opt/ros/kinetic/lib/librostime.so
 /home/wwh/qqq/devel/lib/robot1_description/state_publisher_tutorials: /opt/ros/kinetic/lib/libcpp_common.so
 /home/wwh/qqq/devel/lib/robot1_description/state_publisher_tutorials: /usr/lib/x86_64-linux-gnu/libboost_system.so
 /home/wwh/qqq/devel/lib/robot1_description/state_publisher_tutorials: /usr/lib/x86_64-linux-gnu/libboost_thread.so

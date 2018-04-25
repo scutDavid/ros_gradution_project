@@ -91,9 +91,9 @@ server_EXTERNAL_OBJECTS =
 /home/wwh/qqq/devel/lib/qq/server: qq/CMakeFiles/server.dir/src/server.cpp.o
 /home/wwh/qqq/devel/lib/qq/server: qq/CMakeFiles/server.dir/build.make
 /home/wwh/qqq/devel/lib/qq/server: /opt/ros/kinetic/lib/libcv_bridge.so
-/home/wwh/qqq/devel/lib/qq/server: /opt/ros/kinetic/lib/libopencv_core3.so.3.3.1
-/home/wwh/qqq/devel/lib/qq/server: /opt/ros/kinetic/lib/libopencv_imgproc3.so.3.3.1
-/home/wwh/qqq/devel/lib/qq/server: /opt/ros/kinetic/lib/libopencv_imgcodecs3.so.3.3.1
+/home/wwh/qqq/devel/lib/qq/server: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
+/home/wwh/qqq/devel/lib/qq/server: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1
+/home/wwh/qqq/devel/lib/qq/server: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgcodecs3.so.3.3.1
 /home/wwh/qqq/devel/lib/qq/server: /opt/ros/kinetic/lib/libimage_transport.so
 /home/wwh/qqq/devel/lib/qq/server: /opt/ros/kinetic/lib/libmessage_filters.so
 /home/wwh/qqq/devel/lib/qq/server: /usr/lib/x86_64-linux-gnu/libtinyxml2.so

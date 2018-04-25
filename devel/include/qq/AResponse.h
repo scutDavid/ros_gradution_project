@@ -39,6 +39,7 @@ struct AResponse_
 
 
 
+
   typedef boost::shared_ptr< ::qq::AResponse_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::qq::AResponse_<ContainerAllocator> const> ConstPtr;
 

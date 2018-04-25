@@ -61,14 +61,14 @@ qq/CMakeFiles/qq_generate_messages_cpp: /home/wwh/qqq/devel/include/qq/A.h
 /home/wwh/qqq/devel/include/qq/Num.h: /home/wwh/qqq/src/qq/msg/Num.msg
 /home/wwh/qqq/devel/include/qq/Num.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wwh/qqq/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from qq/Num.msg"
-	cd /home/wwh/qqq/build/qq && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/wwh/qqq/src/qq/msg/Num.msg -Iqq:/home/wwh/qqq/src/qq/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p qq -o /home/wwh/qqq/devel/include/qq -e /opt/ros/kinetic/share/gencpp/cmake/..
+	cd /home/wwh/qqq/src/qq && /home/wwh/qqq/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/wwh/qqq/src/qq/msg/Num.msg -Iqq:/home/wwh/qqq/src/qq/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p qq -o /home/wwh/qqq/devel/include/qq -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/wwh/qqq/devel/include/qq/A.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/wwh/qqq/devel/include/qq/A.h: /home/wwh/qqq/src/qq/srv/A.srv
 /home/wwh/qqq/devel/include/qq/A.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/wwh/qqq/devel/include/qq/A.h: /opt/ros/kinetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wwh/qqq/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from qq/A.srv"
-	cd /home/wwh/qqq/build/qq && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/wwh/qqq/src/qq/srv/A.srv -Iqq:/home/wwh/qqq/src/qq/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p qq -o /home/wwh/qqq/devel/include/qq -e /opt/ros/kinetic/share/gencpp/cmake/..
+	cd /home/wwh/qqq/src/qq && /home/wwh/qqq/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/wwh/qqq/src/qq/srv/A.srv -Iqq:/home/wwh/qqq/src/qq/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p qq -o /home/wwh/qqq/devel/include/qq -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 qq_generate_messages_cpp: qq/CMakeFiles/qq_generate_messages_cpp
 qq_generate_messages_cpp: /home/wwh/qqq/devel/include/qq/Num.h

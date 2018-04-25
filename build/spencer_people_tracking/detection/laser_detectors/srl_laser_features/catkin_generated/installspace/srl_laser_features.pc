@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/install
+
+Name: srl_laser_features
+Description: Description of srl_laser_features
+Version: 1.0.8
+Cflags: -I/home/wwh/qqq/install/include
+Libs: -L/home/wwh/qqq/install/lib -lsrl_laser_features
+Requires: roscpp eigen_conversions

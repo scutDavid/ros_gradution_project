@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/install
+
+Name: srl_laser_segmentation
+Description: Description of srl_laser_segmentation
+Version: 1.0.8
+Cflags: -I/home/wwh/qqq/install/include
+Libs: -L/home/wwh/qqq/install/lib 
+Requires: roscpp std_msgs sensor_msgs message_runtime

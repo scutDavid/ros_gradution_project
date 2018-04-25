@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC   -shared -Wl,-soname,libsimple_layers.so -o /home/wwh/qqq/devel/lib/libsimple_layers.so CMakeFiles/simple_layers.dir/src/simple_layer.cpp.o 

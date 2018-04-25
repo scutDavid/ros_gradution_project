@@ -1,0 +1,6 @@
+spencer_people_tracking/tracking/people/srl_nearest_neighbor_tracker
+/home/wwh/qqq/devel/.private/srl_nearest_neighbor_tracker/share/srl_nearest_neighbor_tracker/cmake/srl_nearest_neighbor_trackerConfig-version.cmake /home/wwh/qqq/devel/share/srl_nearest_neighbor_tracker/cmake/srl_nearest_neighbor_trackerConfig-version.cmake
+/home/wwh/qqq/devel/.private/srl_nearest_neighbor_tracker/share/srl_nearest_neighbor_tracker/cmake/srl_nearest_neighbor_trackerConfig.cmake /home/wwh/qqq/devel/share/srl_nearest_neighbor_tracker/cmake/srl_nearest_neighbor_trackerConfig.cmake
+/home/wwh/qqq/devel/.private/srl_nearest_neighbor_tracker/lib/pkgconfig/srl_nearest_neighbor_tracker.pc /home/wwh/qqq/devel/lib/pkgconfig/srl_nearest_neighbor_tracker.pc
+/home/wwh/qqq/devel/.private/srl_nearest_neighbor_tracker/lib/srl_nearest_neighbor_tracker/logger_node /home/wwh/qqq/devel/lib/srl_nearest_neighbor_tracker/logger_node
+/home/wwh/qqq/devel/.private/srl_nearest_neighbor_tracker/lib/srl_nearest_neighbor_tracker/nnt_node /home/wwh/qqq/devel/lib/srl_nearest_neighbor_tracker/nnt_node

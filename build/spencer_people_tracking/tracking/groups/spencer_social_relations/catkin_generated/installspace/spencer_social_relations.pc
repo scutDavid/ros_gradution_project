@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/install
+
+Name: spencer_social_relations
+Description: Description of spencer_social_relations
+Version: 1.0.8
+Cflags: 
+Libs: -L/home/wwh/qqq/install/lib 
+Requires: rospy roscpp spencer_tracking_msgs spencer_social_relation_msgs

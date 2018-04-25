@@ -1,0 +1,5 @@
+c9
+/home/wwh/qqq/devel/.private/c9/share/c9/cmake/c9Config-version.cmake /home/wwh/qqq/devel/share/c9/cmake/c9Config-version.cmake
+/home/wwh/qqq/devel/.private/c9/share/c9/cmake/c9Config.cmake /home/wwh/qqq/devel/share/c9/cmake/c9Config.cmake
+/home/wwh/qqq/devel/.private/c9/lib/c9/sendGoals /home/wwh/qqq/devel/lib/c9/sendGoals
+/home/wwh/qqq/devel/.private/c9/lib/pkgconfig/c9.pc /home/wwh/qqq/devel/lib/pkgconfig/c9.pc

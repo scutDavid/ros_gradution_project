@@ -1,0 +1,5 @@
+spencer_people_tracking/detection/laser_detectors/srl_laser_features
+/home/wwh/qqq/devel/.private/srl_laser_features/share/srl_laser_features/cmake/srl_laser_featuresConfig-version.cmake /home/wwh/qqq/devel/share/srl_laser_features/cmake/srl_laser_featuresConfig-version.cmake
+/home/wwh/qqq/devel/.private/srl_laser_features/share/srl_laser_features/cmake/srl_laser_featuresConfig.cmake /home/wwh/qqq/devel/share/srl_laser_features/cmake/srl_laser_featuresConfig.cmake
+/home/wwh/qqq/devel/.private/srl_laser_features/lib/libsrl_laser_features.so /home/wwh/qqq/devel/lib/libsrl_laser_features.so
+/home/wwh/qqq/devel/.private/srl_laser_features/lib/pkgconfig/srl_laser_features.pc /home/wwh/qqq/devel/lib/pkgconfig/srl_laser_features.pc

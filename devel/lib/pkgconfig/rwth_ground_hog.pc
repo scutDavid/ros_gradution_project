@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/devel
+
+Name: rwth_ground_hog
+Description: Description of rwth_ground_hog
+Version: 1.0.8
+Cflags: -I/home/wwh/qqq/src/spencer_people_tracking/detection/monocular_detectors/rwth_ground_hog/include
+Libs: -L/home/wwh/qqq/devel/lib 
+Requires: 

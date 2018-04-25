@@ -1,0 +1,5 @@
+spencer_people_tracking/tracking/groups/spencer_social_relations
+/home/wwh/qqq/devel/.private/spencer_social_relations/share/spencer_social_relations/cmake/spencer_social_relationsConfig-version.cmake /home/wwh/qqq/devel/share/spencer_social_relations/cmake/spencer_social_relationsConfig-version.cmake
+/home/wwh/qqq/devel/.private/spencer_social_relations/share/spencer_social_relations/cmake/spencer_social_relationsConfig.cmake /home/wwh/qqq/devel/share/spencer_social_relations/cmake/spencer_social_relationsConfig.cmake
+/home/wwh/qqq/devel/.private/spencer_social_relations/lib/pkgconfig/spencer_social_relations.pc /home/wwh/qqq/devel/lib/pkgconfig/spencer_social_relations.pc
+/home/wwh/qqq/devel/.private/spencer_social_relations/lib/spencer_social_relations/spatial_relations /home/wwh/qqq/devel/lib/spencer_social_relations/spatial_relations

@@ -1,0 +1,18 @@
+(cl:in-package spencer_bagfile_tools-msg)
+(cl:export '(HEADER-VAL
+          HEADER
+          HARDWARETIMESTAMP-VAL
+          HARDWARETIMESTAMP
+          TOTALDISTANCE-VAL
+          TOTALDISTANCE
+          THETA-VAL
+          THETA
+          TICKSLEFT-VAL
+          TICKSLEFT
+          TICKSRIGHT-VAL
+          TICKSRIGHT
+          CALIBOVERALLMULTIPLIER-VAL
+          CALIBOVERALLMULTIPLIER
+          CALIBLEFTENCMULTIPLIER-VAL
+          CALIBLEFTENCMULTIPLIER
+))

@@ -1,0 +1,4 @@
+spencer_people_tracking/tracking/groups/spencer_group_tracking
+/home/wwh/qqq/devel/.private/spencer_group_tracking/share/spencer_group_tracking/cmake/spencer_group_trackingConfig.cmake /home/wwh/qqq/devel/share/spencer_group_tracking/cmake/spencer_group_trackingConfig.cmake
+/home/wwh/qqq/devel/.private/spencer_group_tracking/share/spencer_group_tracking/cmake/spencer_group_trackingConfig-version.cmake /home/wwh/qqq/devel/share/spencer_group_tracking/cmake/spencer_group_trackingConfig-version.cmake
+/home/wwh/qqq/devel/.private/spencer_group_tracking/lib/pkgconfig/spencer_group_tracking.pc /home/wwh/qqq/devel/lib/pkgconfig/spencer_group_tracking.pc

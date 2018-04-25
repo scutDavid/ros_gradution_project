@@ -1,0 +1,8 @@
+prefix=/home/wwh/qqq/install
+
+Name: actor_services
+Description: Description of actor_services
+Version: 0.0.0
+Cflags: -I/home/wwh/qqq/install/include
+Libs: -L/home/wwh/qqq/install/lib 
+Requires: 

@@ -1,0 +1,1 @@
+spencer_people_tracking/detection/laser_detectors/spencer_leg_detector_wrapper

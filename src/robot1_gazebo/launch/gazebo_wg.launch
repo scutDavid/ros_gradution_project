@@ -2,7 +2,8 @@
 <launch>
 <!--include file="$(find gazebo_ros)/launch/empty_world.launch">
  <arg name="world_name" value="/home/wwh/qqq/src/robot1_gazebo/worlds/kitchen.world"/-->>
-  <include file="$(find gazebo_ros)/launch/willowgarage_world.launch">
+  <!--include file="$(find gazebo_ros)/launch/willowgarage_world.launch"-->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
   </include>
 
   <!-- Load the URDF into the ROS Parameter Server -->
@@ -12,6 +13,6 @@
 
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-        args="-urdf -model robot1 -param robot_description -z 0.05"/>
+        args="-urdf -model turtlebot3_burger -param robot_description -z 0.05"/>
 
 </launch>
